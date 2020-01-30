@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5-canvas-接金幣</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+        var userW=$(window).width();
+        var userH=$(window).height();
+        $("#canvas").attr({width: userW, height: userH});
+        $(window).resize(function(){
+            var RuserW=$(window).width();
+            var RuserH=$(window).height();
+            $("#canvas").attr({width: RuserW, height: RuserH});
+        });        
+    });    
+</script>
+<!-- <audio src="audio/bg.mp3" autoplay></audio>-->
+<audio src="http://ifuyuan-wang-static.smartgslb.com/works/canvas/gold-coin/audio/eat.mp3" id='eat'></audio>
+<script src="js/underscore.js"></script>
+<script src="js/game.js"></script>
+<script src="js/icon.js"></script>
+<div class="bg">
+    <canvas id="canvas" width="727" height="453" ></canvas>
+    <button id="btn1">暫停</button>
+    <!---<button id="btn2">繼續</button>--->
+    <div id="getReady">
+        <div class="shadow">
+            <div class="manual">
+                <h2>遊戲操作說明</h2>
+                <div id="manualpc" class="manualtext">鍵盤左右鍵移動</div>
+                <div id="manualmobile" class="manualtext">按著螢幕左右滑動</div>
+            </div>
+            <div class="startbutton">
+                <p class="clickme" onclick="GOGO()">開始遊戲</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.write("<script src='js/hero2.js'><\/script>");
+        document.getElementById('manualmobile').setAttribute("style", "display: block;");
+    }else{
+        document.write("<script src='js/hero.js'><\/script>");
+        document.getElementById("manualpc").setAttribute("style", "display: block;");
+    }
+</script>
+<script>
+        function GOGO()
+        {
+            document.getElementById('getReady').style.display="none";
+            setTimeout(gameStarNow, 1000);
+        }
+
+    
+        var canvas = document.getElementById('canvas');
+        var eat = document.getElementById('eat');
+        var ctx = canvas.getContext("2d");
+        var btn1 = document.getElementById('btn1');
+        //var btn2 = document.getElementById('btn2');
+
+    
+        var FPS = 40; //所有金幣掉落速度 主控制 defalt 50
+        var frameNum = 0;
+        var time = 30;
+        var totle =0;
+
+        var iconUrlArr = ["images/icon.png"];
+        var jieIconArr = ["images/jie-s.png"];
+        var iconImgArr = [];
+        var iconArr = [];
+        var jieImgArr = [];
+        var jieArr = [];
+        var allReadyNum = 0;
+        //金幣組合
+        var iconsTypeArr = [
+            {imgx : 0,   imgy : 0,   w :50, h : 55, score:1,   speed:1 },
+            {imgx : 50,  imgy : 0,   w :50, h : 55, score:2,   speed:2 },
+            {imgx : 100, imgy : 0,   w :50, h : 55, score:5,   speed:4 },
+            {imgx : 150, imgy : 0,   w :50, h : 55, score:10,  speed:6 },
+            {imgx : 200, imgy : 0,   w :50, h : 55, score:20,  speed:8 },
+            {imgx : 0,   imgy : 55 , w :50, h : 55, score:-1,  speed:1 },
+            {imgx : 50,  imgy : 55 , w :50, h : 55, score:-2,  speed:2 },
+            {imgx : 100, imgy : 55 , w :50, h : 55, score:-5,  speed:4 },
+            {imgx : 150, imgy : 55 , w :50, h : 55, score:-10, speed:6 },
+            {imgx : 200, imgy : 55 , w :50, h : 55, score:-20, speed:6 },
+        ];
+
+        var jieicon = [
+            {imgx : 0,   imgy : 0,   w : 80, h : 90 },
+            {imgx : 80, imgy : 0,   w : 80, h : 90 },
+        ];
+
+
+        var game = new Game();
+        var hero = new Hero(300);
+
+        function gameStarNow(){
+            for(var i =0;i<iconUrlArr.length;i++){
+                iconImgArr[i] = new Image();
+                iconImgArr[i].src = iconUrlArr[i];
+                iconImgArr[i].onload = function () {
+                    allReadyNum ++;
+                    ctx.font = "20px 微軟正黑體";
+                    ctx.fillText("遊戲加載中:"+i+"/"+iconUrlArr.length,20,20);
+                    if(allReadyNum == iconUrlArr.length){
+                        game.run();
+                    }
+                }
+            }
+        }       
+
+        $("#btn1").click(function(){
+            if($("#btn1").text()=='暫停'){
+                game.stop();
+                $("#btn1").text('繼續');
+            }else{
+                game.start();
+                $("#btn1").text('暫停');
+            }
+        });
+
+</script>
+</body>
+</html>
