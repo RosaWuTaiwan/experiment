@@ -21,7 +21,8 @@
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
         let vh = window.innerHeight * 0.01;
         // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);        
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
     </script>
 
 </head>
@@ -48,6 +49,16 @@
             </ul>
         </footer>
     </div>
+    <script>
+        window.addEventListener("onorientationchange"inwindow ? "orientationchange" : "resize", function () {
+            if (window.orientation === 180 || window.orientation === 0) {
+                alert('竖屏状态！');
+            }
+            if (window.orientation === 90 || window.orientation === -90) {
+                alert('横屏状态！');
+            }
+        }, false);        
+    </script>
 </body>
 
 </html>
