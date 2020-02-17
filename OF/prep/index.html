@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Future - COMING SOON</title>
-	<meta property="og:site_name" content="One Future" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="One Future - COMING SOON" />
-	<meta property="og:image" content="images/fbcover.png" />
-	<meta property="og:url" content="#" />
-	<meta property="og:description" content="One Future - COMING SOON" />
-	<meta itemprop="name" content="One Future - COMING SOON" />
-	<meta itemprop="description" content="One Future - COMING SOON" />
-	<meta itemprop="url" content="#" />
+    <meta property="og:site_name" content="One Future" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="One Future - COMING SOON" />
+    <meta property="og:image" content="images/fbcover.png" />
+    <meta property="og:url" content="#" />
+    <meta property="og:description" content="One Future - COMING SOON" />
+    <meta itemprop="name" content="One Future - COMING SOON" />
+    <meta itemprop="description" content="One Future - COMING SOON" />
+    <meta itemprop="url" content="#" />
     <meta itemprop="image" content="images/fbcover.png" />
     <link href="css/coming.css" rel="stylesheet" type="text/css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);        
+    </script>
 
 </head>
+
 <body>
     <div class="wrap">
         <header>
@@ -42,4 +49,5 @@
         </footer>
     </div>
 </body>
+
 </html>
