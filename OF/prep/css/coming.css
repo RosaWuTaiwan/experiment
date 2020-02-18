@@ -11,12 +11,13 @@ a{outline:0;color:#a78774;text-decoration:none;-webkit-backface-visibility:hidde
 a:focus{outline:0}
 input:focus,select:focus,textarea:focus{outline:-webkit-focus-ring-color auto 0}
 img{max-width:100%}
-.wrap{background-image:url(../images/bg.jpeg);width:100%;height:100vh;background-repeat:no-repeat;background-size:cover;background-position:50%;position:relative;display:box;}
+.wrap{background-image:url(../images/bg.jpeg);width:100%;height:100vh;background-repeat:no-repeat;background-size:cover;background-position:50%;position:relative;}
 header{position:absolute;right:40px;top:30px;width:250px}
 footer{position:absolute;left:40px;bottom:40px}
-.content{position: relative;width: auto;height: auto;top:50%;transform:translateY(-50%);}
-.content h2{font-size:60px;text-align:center}
-.content .ann{width:300px;margin:0 auto;margin-top:50px}
+.content{position: relative;width:100vw;height: 100vh;display: table-cell;vertical-align: middle;}
+.dontknow{width: auto;height: auto;}
+.content h2{font-size: 35px;text-align:center;}
+.content .ann{width:300px;margin:0 auto;}
 .content .ann p{margin-top:-20px;animation-name:totop;animation-duration:2.5s;animation-iteration-count:infinite;opacity:0}
 @keyframes totop{
 0%{opacity:0}
@@ -31,25 +32,22 @@ footer{position:absolute;left:40px;bottom:40px}
 footer ul li{line-height:90%}
 footer ul li:first-child{font-size:24px;font-weight:700;margin-bottom:10px}
 @media screen and (max-width:1280px){
-.content .ann{width:250px;margin-top:70px}
+.content .ann{width:250px;}
 header{width:200px}
-.content h2{font-size:45px}
+.content h2{font-size: 30px;}
 footer ul li a,footer ul li b{font-size:18px}
 footer ul li:first-child{font-size:20px}
 }
 @media screen and (max-width:640px){
 header{width:150px;right:20px;top:20px}
 footer{left:20px;bottom:20px}
-.wrap{height:calc(var(--vh,1vh) * 100);}
 }
 @media screen and (max-width:480px){
 header{width:120px}
-.content h2{font-size:30px}
+.content h2{font-size:30px;font-size: 20px;}
 .content .ann{width:180px}
 footer ul li a,footer ul li b{font-size:15px}
 footer ul li:first-child{font-size:18px}
-
-
 }
 @media screen and (max-width:360px){
 .content h2{font-size:25px}
