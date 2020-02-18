@@ -20,15 +20,20 @@
     <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
     <script>
         $(document).ready(function () {
-            if ($('html').attr("class") == 'windows desktop landscape'){
+            if ($('html').attr("class") == 'windows desktop landscape') {
                 $('.wrap').css('height', '100vh');
-            }else if($('html').attr("class") == 'windows desktop portrait'){
+            } else if ($('html').attr("class") == 'windows desktop portrait') {
                 $('.wrap').css('height', '100vh');
-            }else{
+            } else {
                 let vh = window.innerHeight * 0.01;
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
                 $('.wrap').css('height', 'calc(var(--vh,1vh) * 100)');
             }
+            device.onChangeOrientation(newOrientation => {
+                if ($('html').attr("class") != 'windows desktop landscape' || $('html').attr("class") != 'windows desktop portrait') {
+                    location.reload()
+                }
+            });
         });
     </script>
 </head>
