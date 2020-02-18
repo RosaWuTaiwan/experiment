@@ -16,19 +16,30 @@
     <meta itemprop="url" content="#" />
     <meta itemprop="image" content="images/fbcover.png" />
     <link href="css/coming.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
     <script>
         $(document).ready(function () {
-            device.onChangeOrientation(function (newOrientation) {
-                console.log("New orientation is " + newOrientation);
-            });
-            if ($('html').attr() != 'windows desktop landscape' || $('html').attr() != 'windows desktop portrait') {
+            // if ($('html').attr("class") != 'windows desktop landscape' || $('html').attr("class") != 'windows desktop portrait') {
+            //     let vh = window.innerHeight * 0.01;
+            //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+            //     $('.wrap').css('height', 'calc(var(--vh,1vh) * 100)');
+            //     console.log('手機');
+            // } else {
+            //     $('.wrap').css('height', '100vh');
+            //     console.log('桌墊');
+            // }
+            // device.onChangeOrientation(function (newOrientation) {
+            //     console.log("New orientation is " + newOrientation);
+            // });
+            if ($('html').attr("class") == 'windows desktop landscape'){
+                $('.wrap').css('height', '100vh');
+            }else if($('html').attr("class") == 'windows desktop portrait'){
+                $('.wrap').css('height', '100vh');
+            }else{
                 let vh = window.innerHeight * 0.01;
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
                 $('.wrap').css('height', 'calc(var(--vh,1vh) * 100)');
-            } else {
-                $('.wrap').css('height', '100vh');
             }
         });
     </script>
