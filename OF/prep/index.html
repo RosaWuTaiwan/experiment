@@ -17,14 +17,6 @@
     <meta itemprop="image" content="images/fbcover.png" />
     <link href="css/coming.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-        let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    </script>
-
 </head>
 
 <body>
@@ -33,32 +25,39 @@
             <h1><img src="images/logo.png" alt=""></h1>
         </header>
         <div class="content">
-            <h2>COMING SOON...</h2>
-            <div class="ann">
-                <p><img src="images/loading.png" alt=""></p>
-                <p class="p2"><img src="images/loading.png" alt=""></p>
-                <p class="p3"><img src="images/loading.png" alt=""></p>
-                <p class="p4"><img src="images/loading.png" alt=""></p>
+            <div class="dontknow">
+                <div class="ann">
+                    <p><img src="images/loading.png" alt=""></p>
+                    <p class="p2"><img src="images/loading.png" alt=""></p>
+                    <p class="p3"><img src="images/loading.png" alt=""></p>
+                    <p class="p4"><img src="images/loading.png" alt=""></p>
+                </div>
+                <h2>COMING SOON...</h2>
             </div>
         </div>
         <footer>
             <ul>
-                <li class="title">WANT TO CONTANT US...</li>
+                <li class="title">CONTANT US...</li>
                 <li><b>PHONE:</b><a href="">+886-2-2609-1000</a></li>
-                <li><b>EMAIL:</b><a href="">elena@1future.com.tw</a></li>
+                <li><b>EMAIL:</b><a href="">susanhuang@1future.com.tw</a></li>
             </ul>
         </footer>
     </div>
-    <script>
-        window.addEventListener("onorientationchange"inwindow ? "orientationchange" : "resize", function () {
-            if (window.orientation === 180 || window.orientation === 0) {
-                alert('竖屏状态！');
+    <!--<script>
+        $(document).ready(function(){
+          $('.wrap').css('height','100vh');   
+          $(window).resize(function(){
+            var x = $(window).width();
+            if(x < 640){
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);   
+                $('.wrap').css('height','calc(var(--vh,1vh) * 100)');   
+            }else{
+                $('.wrap').css('height','100vh');   
             }
-            if (window.orientation === 90 || window.orientation === -90) {
-                alert('横屏状态！');
-            }
-        }, false);        
-    </script>
+          });
+        });
+        </script>-->
 </body>
 
 </html>
