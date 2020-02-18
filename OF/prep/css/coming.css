@@ -37,6 +37,14 @@ header{width:200px}
 .content h2{font-size: 30px;}
 footer ul li a,footer ul li b{font-size:18px}
 footer ul li:first-child{font-size:20px}
+html.mobile .wrap,html.tablet .wrap{position: fixed;}
+html.mobile.landscape .content .ann{width:180px}
+html.mobile.landscape header{width:120px;right:20px;top:20px}
+html.mobile.landscape footer{left:20px;bottom:20px}
+html.mobile.landscape footer ul li a,footer ul li b{font-size: 13px;}
+html.mobile.landscape footer ul li:first-child{font-size: 16px;}
+html.mobile.landscape .content h2{font-size: 18px;}
+html.mobile.landscape .content .ann{width:140px}
 }
 @media screen and (max-width:640px){
 header{width:150px;right:20px;top:20px}
