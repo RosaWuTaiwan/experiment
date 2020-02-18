@@ -44,26 +44,19 @@
             </ul>
         </footer>
     </div>
-    <script type="text/javascript">
-        device.onChangeOrientation(function (newOrientation) {
-          console.log("New orientation is " + newOrientation);
-        });
-    </script>
     <script>
-        $(document).ready(function(){
-            if($('html.mobile')){
-            $(window).resize(function(){
-                var x = $(window).width();
-                if(x < 640){
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);   
-                $('.wrap').css('height','calc(var(--vh,1vh) * 100)');   
-                }else{
-                $('.wrap').css('height','100vh');   
-                }
+        $(document).ready(function () {
+            device.onChangeOrientation(function (newOrientation) {
+                console.log("New orientation is " + newOrientation);
             });
-
+            if ($('html').attr() != 'windows desktop landscape' || $('html').attr() != 'windows desktop portrait') {
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+                $('.wrap').css('height', 'calc(var(--vh,1vh) * 100)');
+            } else {
+                $('.wrap').css('height', '100vh');
             }
+
         });
     </script>
 </body>
