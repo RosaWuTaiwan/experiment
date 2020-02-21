@@ -19,6 +19,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
     <script>
+        function A() {
+            $('.content .ann p').attr('style', 'animation-name: totop;');
+            $('.content h2').attr('style', 'opacity:1;');
+        }
+        $(function () {
+            setTimeout('A()', 1000); //延遲0.7秒
+        })
+
         $(document).ready(function () {
             if ($('html').attr("class") == 'windows desktop landscape') {
                 $('.wrap').css('height', '100vh');
@@ -35,13 +43,6 @@
                 }
             });
         });
-        function A(){
-            $('.content .ann p').attr('style','animation-name: totop;');
-            $('.content h2').attr('style','opacity:1;');
-        }
-        $(function (){
-            setTimeout('A()', 700); //延遲0.5秒
-        })
     </script>
 </head>
 
