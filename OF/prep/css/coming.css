@@ -45,6 +45,8 @@ footer ul li b,html.mobile.landscape footer ul li a{font-size:13px}
 html.mobile.landscape footer ul li:first-child{font-size:16px}
 html.mobile.landscape .content h2{font-size:18px}
 html.mobile.landscape .content .ann{width:140px}
+.wrap{background-size: cover;
+    background-position: 0% 50%;}
 }
 @media screen and (max-width:640px){
 header{width:150px;right:20px;top:20px}
