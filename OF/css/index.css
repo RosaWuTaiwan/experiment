@@ -3,7 +3,7 @@
 .swiper-slide{text-align:center;font-size:18px;background:#fff;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}
 .banner-info{align-items:center;color:#fff;text-align:left}
 .banner-info>div{margin-left:10%;margin-top:10%}
-.banner-info h2{font-size:60px;letter-spacing:.1em;font-weight: bold;}
+.banner-info h2{font-size:60px;letter-spacing:.1em;font-weight:700}
 .swiper-container-fade .swiper-slide{background-position:50%;background-size:cover}
 .warpper.opensoure{height:initial}
 #about{background-image:url(../images/index/about-bg.jpg);position:relative;background-size:cover;background-position:50%}
@@ -30,20 +30,20 @@
 #product-catalog .catalogList .plist .plist-circle:after{content:'';display:block;width:100%;height:100%;border-radius:50%;z-index:1;position:absolute;top:0;left:0;background:rgba(0,0,0,.3)}
 #product-catalog .catalogList .plist a{display:block;position:absolute;top:0;left:0;width:100%;height:100%;z-index:3}
 #product-catalog .catalogList .plist .category-describe{position:relative;z-index:2}
-#product-catalog .catalogList .plist .category-describe h2{color:#fff;font-size:55px;transition:all ease-in-out .2s;font-weight: bold;}
+#product-catalog .catalogList .plist .category-describe h2{color:#fff;font-size:55px;transition:all ease-in-out .2s;font-weight:700}
 .newsStyle{margin:150px 50px;width:calc(100% - 100px)}
 .newsTitleBox{width:calc(100% / 3)}
 .newsTitleBox .info{height:calc(100% - 4px);border:2px solid #b39379;margin-right:15px;align-content:flex-end}
 .newsTitleBox .info .info-inside{margin:40px}
 .newsTitleBox .info .info-inside h2{color:#46423e;font-size:32px}
-.newsTitleBox .info .info-inside h2 b{display:block;font-size:40px;color:#b39379;font-weight: bold;}
+.newsTitleBox .info .info-inside h2 b{display:block;font-size:40px;color:#b39379;font-weight:700}
 .newsTitleBox .info .info-inside h3{margin-top:5px}
 #index-contact .contact-style .linkTo h2 a,.newsTitleBox .info .info-inside h3 a{display:inline-block;color:#b39379;border:2px solid #b39379;padding:8px 15px}
 .newsStyle .newsList{width:calc((100% / 3)*2)}
 .newsStyle .newsList>div{width:50%}
 .newsStyle .newsList .news-list{height:100%;margin:0 15px;position:relative;align-content:center;justify-content:center;background-repeat:no-repeat;background-position:50%;background-size:auto 100%;transition:all ease-in-out .2s;animation-name:fadeInRight}
 .newsStyle .newsList .news-list a{display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:3}
-.newsStyle .newsList .news-list h3{color:#fff;font-size:40px;transition:all ease-in-out .2s;font-weight: bold;}
+.newsStyle .newsList .news-list h3{color:#fff;font-size:40px;transition:all ease-in-out .2s;font-weight:700}
 #index-contact{align-items:center;background-color:#f3f3f3;background-image:url(../images/index/map-bg2.png);background-repeat:no-repeat;background-position:100% 100%;background-size:auto 100%}
 #index-contact .contact-style{width:100%;margin:70px 0;justify-content:space-between}
 #index-contact .contact-style .map{position:relative;width:1280px;height:623px;margin-left:50px;animation-name:fadeInUp}
@@ -136,9 +136,9 @@
 }
 @media screen and (max-width:480px){
 .banner-info h2{font-size:30px}
-#about .about-info .info{width:calc(100% - 40px);padding:70px 20px}
+#about .about-info .info{width:calc(100% - 40px);padding:70px 20px;margin:40px 0}
 .newsStyle .newsList .news-list{height:370px}
-.newsStyle .newsList .news-list h3{font-size:30px}
+.newsStyle .newsList .news-list h3{font-size:30px;top:25%;transform:translateY(-25%)}
 #about .about-info{min-height:80vh}
 .newsStyle .newsList{margin-top:10px}
 #index-contact .contact-style .linkTo h2 a{font-size:20px}
