@@ -137,8 +137,8 @@
 @media screen and (max-width:480px){
 .banner-info h2{font-size:30px}
 #about .about-info .info{width:calc(100% - 40px);padding:70px 20px;margin:40px 0}
-.newsStyle .newsList .news-list{height:370px}
-.newsStyle .newsList .news-list h3{font-size:30px;top:25%;transform:translateY(-25%)}
+.newsStyle .newsList .news-list{font-size:30px;top:25%;transform:translateY(-25%);height:74px}
+.newsStyle .newsList .news-list h3{font-size:30px}
 #about .about-info{min-height:80vh}
 .newsStyle .newsList{margin-top:10px}
 #index-contact .contact-style .linkTo h2 a{font-size:20px}
