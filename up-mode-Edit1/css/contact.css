@@ -1,0 +1,46 @@
+input, select{
+    -webkit-appearance:none; /*去除系统默认的样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);   /* 点击高亮的颜色*/
+    border: none;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+select,
+button {
+-webkit-appearance: none;
+
+}
+
+select{
+border-top-right-radius: 0;
+border-top-left-radius: 0;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+-webkit-appearance:none;
+background-image:url(/images/selectbutton.png);
+background-repeat:no-repeat;
+background-position:95% 50%;
+}
+
+form{}
+form .formList{
+    justify-content: space-between;
+    margin: 40px 0;
+}
+form .formList >div{
+    width: calc(50% - 20px);
+}
+form .formList .list{margin: 10px 0;}
+form .formList .list input{
+    display: block;
+    width: calc(100% - 22px);
+    background: #dcdcdc;
+    padding: 10px;
+    font-size: 18px;
+}
+form .formList .list textarea{background: #dcdcdc;font-size: 18px;padding: 10px;border: 0;width: calc(100% - 22px);height: 123px;}
+.sendbtn{text-align: center;}
+.sendbtn p{text-align: center;}
+.sendbtn p a{color: #b39379;display: inline-block;border: 2px solid #b39379;padding: 8px 25px;}
