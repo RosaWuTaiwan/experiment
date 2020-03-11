@@ -5,7 +5,7 @@
 .slide .slide__img img{max-width:100%;height:auto;opacity:1!important;-webkit-animation-duration:3s;animation-duration:3s;-webkit-transition:all 1s ease;-o-transition:all 1s ease;transition:all 1s ease}
 .slide .slide__content{position:absolute;top:50%;left:25%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 .slide .slide__content p{margin:20px 0}
-.slide .slide__content p span{color:#a78774;font-size:80px;font-family:Cabin,"微軟正黑體","Lucida Grande",Arial,"Arial Narrow"}
+.slide .slide__content p span{color:#a78774;font-size:80px;font-family:Cabin,"微軟正黑體","Lucida Grande",Arial,"Arial Narrow";opacity: 0;}
 .slide .slide__content--headings .animated{-webkit-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}
 .slider [data-animation-in]{opacity:0;-webkit-animation-duration:1.5s;animation-duration:1.5s;-webkit-transition:opacity .5s ease .3s;-o-transition:opacity .5s ease .3s;transition:opacity .5s ease .3s}
 .slick-dotted .slick-slider{margin-bottom:30px}
