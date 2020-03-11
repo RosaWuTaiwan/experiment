@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首頁-修改</title>
     <link rel="stylesheet" href="../css/main.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <link rel="shortcut icon" href="../images/main/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/animate.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <!---只首頁使用---->
     <link rel="stylesheet" href="../css/loading/main.css">
     <link rel="stylesheet" href="../css/loading/demo_styles.css">
@@ -20,9 +20,11 @@
     <script src='https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js'></script>
     <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    <!---只首頁使用 畢--->
     <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/index.css">
-    <!---只首頁使用 畢--->
+    <script src="../js/loading/progress.js"></script>
+    <script src="../js/loading/demo-x.js"></script>
 </head>
 
 <body class="dm-demo1 noscroll">
@@ -46,8 +48,6 @@
             </section>
         </div>
     </div>
-    <script src="../js/loading/progress.js"></script>
-    <script src="../js/loading/demo-x.js"></script>
     <script>
         var cvw = $(window).width();
         if (cvw > 640) {
@@ -96,7 +96,6 @@
         $(document).ready(function () {
             $(".wkdeom").delay(5000).fadeOut(2000);
         });
-        //test2
         var timer2
         $(window).scroll(function () {
             var anbox = $('#about .efe .window');
@@ -114,6 +113,7 @@
                 anbox3.removeClass('an-move');
             }, 400)
         })        
+
     </script>
     <!---loading end--->
     <main>
@@ -234,33 +234,20 @@
                     </div>
                 </div>
             </div>
+            <script>
+                //
+                $('.slider').slick({
+                    autoplay: true,
+                    speed: 800,
+                    fade: true,
+                    lazyLoad: 'progressive',
+                    arrows: false,
+                    dots: false,
+                }).slickAnimation();
+
+
+            </script>
             <div class="object-area">
-                <!-- <script>
-                    $(document).scroll(function () {
-                        var anbox = $('#about .efe .window');
-                        anbox.addClass('an-move');
-                        setTimeout(function () {
-                            anbox.removeClass('an-move');
-                        }, 1800
-                        );
-                    });
-                    $(document).scroll(function () {
-                        var anbox = $('.plist-circle');
-                        anbox.addClass('an-move');
-                        setTimeout(function () {
-                            anbox.removeClass('an-move');
-                        }, 1800
-                        );
-                    });
-                    $(document).scroll(function () {
-                        var anbox = $('.news-list .bg');
-                        anbox.addClass('an-move');
-                        setTimeout(function () {
-                            anbox.removeClass('an-move');
-                        }, 1800
-                        );
-                    });
-                </script> -->
                 <div id="about" class="fullHeight">
                     <div class="defult-w">
                         <article class="about-info flexbox">
@@ -474,15 +461,6 @@
                 }
             })
 
-            //
-            $('.slider').slick({
-                autoplay: true,
-                speed: 800,
-                fade: true,
-                lazyLoad: 'progressive',
-                arrows: false,
-                dots: false,
-            }).slickAnimation();            
         </script>
     </main>
 </body>
