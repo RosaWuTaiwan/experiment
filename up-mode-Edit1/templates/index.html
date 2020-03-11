@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首頁-修改</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <link rel="shortcut icon" href="../images/main/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/animate.css">
+    <!---只首頁使用---->
+    <link rel="stylesheet" href="../css/loading/main.css">
+    <link rel="stylesheet" href="../css/loading/demo_styles.css">
+    <link rel="stylesheet" href="../css/loading/demo1-x.css">
+    <link rel="stylesheet" type="text/css" href="../css/loading/default-x.css">
+    <link rel="stylesheet" type="text/css" href="../css/loading/loading.css">
+    <link rel="stylesheet" href="../js/package/css/swiper.min.css">
+    <script src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <!---只首頁使用 畢--->
+</head>
+
+<body class="dm-demo1 noscroll">
+    <!---loading--->
+    <div class="wkdeom">
+        <div class="tjmother">
+            <div class="tj">
+                <canvas id="my_html" width="84" height="84"></canvas>
+            </div>
+        </div>
+        <div class="htmleaf-container">
+            <!-- Demo Navigation -->
+            <nav class="nav clearfix">
+                <button class="nav-el" id="el-topleft" data-id="ov-topleft" style="border-radius: 50%;"></button>
+                <span></span>
+            </nav>
+            <!-- Overlay (hidden by default)-->
+            <section class="overlay" id="ov-topleft">
+                <div class="wrap">
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../js/loading/progress.js"></script>
+    <script src="../js/loading/demo-x.js"></script>
+    <script>
+        var cvw = $(window).width();
+        if (cvw > 640) {
+            var p1 = new Progress({
+                el: 'my_html', //canvas元素id
+                deg: 100, //绘制角度
+                timer: 7, //绘制时间
+                lineWidth: 5, //线宽
+                lineBgColor: '#fff', //底圆颜色
+                lineColor: '#a78774', //动态圆颜色
+                textColor: '#BBBBBB', //文本颜色
+                fontSize: 0, //字体大小
+                circleRadius: 42 //圆半径
+            });
+
+        } else {
+            var p2 = new Progress({
+                el: 'my_html', //canvas元素id
+                deg: 100, //绘制角度
+                timer: 7, //绘制时间
+                lineWidth: 3, //线宽
+                lineBgColor: '#fff', //底圆颜色
+                lineColor: '#a78774', //动态圆颜色
+                textColor: '#BBBBBB', //文本颜色
+                fontSize: 0, //字体大小
+                circleRadius: 37 //圆半径
+            });
+        }
+        setTimeout(
+            function () {
+                /* Add classes on defined elements */
+                $('.nav-el').addClass('active');
+                $(nav).addClass('fx-box_rotate');
+
+                /* Activate related overlay */
+                var o_target = $('.nav-el').data('id');
+                $('#' + o_target).addClass('active');
+
+                /* Prevent scrolling */
+                $("body").removeClass('noscroll');
+                $(".wkdeom .nav-el").delay(1000).css("opacity", "1");
+                $(".wkdeom nav span").delay(5000).css("opacity", "0");
+                $(".tjmother").delay(7000).css("opacity", "0");
+            }, 3000
+        );
+        $(document).ready(function () {
+            $(".wkdeom").delay(5000).fadeOut(2000);
+        });
+        //test2
+        var timer2
+        $(window).scroll(function () {
+            var anbox = $('#about .efe .window');
+            var anbox2 = $('.plist-circle');
+            var anbox3 = $('.news-list .bg');
+            anbox.addClass('an-move');
+            anbox2.addClass('an-move');
+            anbox3.addClass('an-move');
+            window.clearTimeout(timer2);
+
+            timer2 = window.setTimeout(function () {
+                console.log('我刪') //callback your coding
+                anbox.removeClass('an-move');
+                anbox2.removeClass('an-move');
+                anbox3.removeClass('an-move');
+            }, 400)
+        })        
+    </script>
+    <!---loading end--->
+    <main>
+        <div class="warpper">
+            <header class="head-area">
+                <div class="cis-style">
+                    <a href="" title="HOME"><img src="../images/main/logo-defalut.png" alt="HOME"></a>
+                </div>
+                <div id="menu-trigger-open">
+                    <h2 class="txt">MENU<span class="bar bar1"></span><span class="bar bar2"></span></h2>
+                </div>
+                <div class="menu-content">
+                    <div id="menu-trigger-close">
+                        <p class="txt">MENU<span class="bar bar1"></span><span class="bar bar2"></span></p>
+                    </div>
+                    <nav class="flexbox">
+                        <ol>
+                            <li>
+                                <a href="">
+                                    <div class="menuListStyle">
+                                        <h3>WHO WE ARE</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="hasChild">
+                                <a href="">
+                                    <div class="menuListStyle">
+                                        <h3>PRODUCT</h3>
+                                    </div>
+                                </a>
+                                <ul class="sub_nav">
+                                    <li><a href="">IN COLLECTION</a></li>
+                                    <li><a href="">IN TEXTURE</a></li>
+                                    <li><a href="">IN CLOTHING</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="menuListStyle">
+                                        <h3>NEWS</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="menuListStyle">
+                                        <h3>CONTACT</h3>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="inside-cis-style">
+                        <a href="" title="HOME"><img src="../images/main/logo-defalut.png" alt="HOME"></a>
+                    </div>
+                </div>
+            </header>
+            <div class="banner-area">
+                <div class="slider">
+                    <div class="slide">
+                        <div class="slide__img">
+                            <img src="" alt="" data-lazy="../images/banner/banner01.jpg"
+                                class="full-image animated pcset" data-animation-in="zoomInImage" />
+                            <img src="" alt="" data-lazy="../images/banner/banner01_m.jpg"
+                                class="full-image animated moset" data-animation-in="zoomInImage" />
+                        </div>
+                        <div class="slide__content">
+                            <div class="slide__content--headings">
+                                <p><span class="animated" data-animation-in="fadeInUp" data-delay-in="0.2">T</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.3">O</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">　</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.5">K</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.6">N</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.7">I</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.8">T</span></p>
+                                <p><span class="animated" data-animation-in="fadeInUp" data-delay-in="0.9">T</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1">H</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.1">E</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.2">　</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.3">F</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.4">U</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.5">T</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.6">U</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.7">R</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.8">E</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__img">
+                            <img src="" alt="" data-lazy="../images/banner/banner02.jpg"
+                                class="full-image animated pcset" data-animation-in="zoomInImage" />
+                            <img src="" alt="" data-lazy="../images/banner/banner02_m.jpg"
+                                class="full-image animated moset" data-animation-in="zoomInImage" />
+                        </div>
+                        <div class="slide__content">
+                            <div class="slide__content--headings">
+                                <p><span class="animated" data-animation-in="fadeInUp" data-delay-in="0.2">T</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.3">O</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.4">　</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.5">K</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.6">N</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.7">I</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="0.8">T</span></p>
+                                <p><span class="animated" data-animation-in="fadeInUp" data-delay-in="0.9">T</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1">H</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.1">E</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.2">　</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.3">F</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.4">U</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.5">T</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.6">U</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.7">R</span><span
+                                        class="animated" data-animation-in="fadeInUp" data-delay-in="1.8">E</span></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="object-area">
+                <!-- <script>
+                    $(document).scroll(function () {
+                        var anbox = $('#about .efe .window');
+                        anbox.addClass('an-move');
+                        setTimeout(function () {
+                            anbox.removeClass('an-move');
+                        }, 1800
+                        );
+                    });
+                    $(document).scroll(function () {
+                        var anbox = $('.plist-circle');
+                        anbox.addClass('an-move');
+                        setTimeout(function () {
+                            anbox.removeClass('an-move');
+                        }, 1800
+                        );
+                    });
+                    $(document).scroll(function () {
+                        var anbox = $('.news-list .bg');
+                        anbox.addClass('an-move');
+                        setTimeout(function () {
+                            anbox.removeClass('an-move');
+                        }, 1800
+                        );
+                    });
+                </script> -->
+                <div id="about" class="fullHeight">
+                    <div class="defult-w">
+                        <article class="about-info flexbox">
+                            <div class="info wow" data-wow-delay="0.6s">
+                                <h2>WHO WE ARE</h2>
+                                <h3>We want to provide <span>high-quality</span> products and <span>service</span>
+                                    efficiency to
+                                    satisfy the demands of our customers.</h3>
+                                <p><a href="">MORE</a></p>
+                            </div>
+                            <div class="efe wow" data-wow-delay="0.2s">
+                                <div class="window" style="background-image:url(../images/index/about-bg.jpg);"></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="product-catalog" class="fullHeight flexbox">
+                    <div class="defult-w">
+                        <div class="overCatalog">
+                            <div class="animation-place flexbox">
+                                <div class="count-wrap">
+                                    <div class="number-count">
+                                        <div class="number" id="myTargetElement">20</div>
+                                        <span>+</span>
+                                        <b class="plus">Experience</b>
+                                    </div>
+                                    <div class="number-count">
+                                        <div class="number" id="myTargetElement3">25</div>
+                                        <span>+</span>
+                                        <b class="plus">Texture</b>
+                                    </div>
+                                    <div class="number-count">
+                                        <div class="number" id="myTargetElement2">900</div>
+                                        <span>+</span>
+                                        <b class="plus">Fabrics</b>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalogList">
+                            <div class="catalogList-three flexbox">
+                                <div class="plist wow">
+                                    <div class="plist-circle flexbox"
+                                        style="background-image:url(../images/index/catalogList-img1.png);">
+
+                                        <div class="category-describe">
+                                            <h2>IN CLOTHING</h2>
+                                        </div>
+                                        <a href="#" title="IN CLOTHING"></a>
+                                    </div>
+                                    <img src="../images/index/catalogList-blank.png" alt="IN CLOTHING">
+                                </div>
+                                <div class="plist wow" data-wow-delay=".3s">
+                                    <div class="plist-circle flexbox"
+                                        style="background-image:url(../images/index/catalogList-defult.jpg);">
+
+                                        <div class="category-describe">
+                                            <h2>IN COLLECTION</h2>
+                                        </div>
+                                        <a href="#" title="IN COLLECTION"></a>
+                                    </div>
+                                    <img src="../images/index/catalogList-blank.png" alt="IN COLLECTION">
+                                </div>
+                                <div class="plist wow" data-wow-delay=".6s">
+                                    <div class="plist-circle flexbox"
+                                        style="background-image:url(../images/index/catalogList-img3.png);">
+
+                                        <div class="category-describe">
+                                            <h2>IN TEXTURE</h2>
+                                        </div>
+                                        <a href="#" title="IN TEXTURE"></a>
+                                    </div>
+                                    <img src="../images/index/catalogList-blank.png" alt="IN TEXTURE">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="news" class="fullHeight flexbox">
+                    <div class="defult-w flexbox">
+                        <div class="newsStyle flexbox">
+                            <div class="newsTitleBox">
+                                <div class="info flexbox">
+                                    <div class="info-inside">
+                                        <h2>Our Latest<b>NEWS +</b></h2>
+                                        <h3><a href="#" title="SEE MORE">SEE MORE</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="newsList flexbox">
+                                <div>
+                                    <div class="news-list flexbox wow">
+                                        <a href="" title=""></a>
+                                        <h3>IN OSACA</h3>
+                                        <div class="bg" style="background-image: url(../images/index/news-img1.png);">
+                                        </div>
+                                        <img src="../images/index/news-blank.png" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="news-list flexbox wow" data-wow-delay=".3s">
+                                        <a href="" title=""></a>
+                                        <h3>IN OSACA</h3>
+                                        <div class="bg" style="background-image: url(../images/index/news-img2.png);">
+                                        </div>
+                                        <img src="../images/index/news-blank.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="index-contact" class="fullHeight flexbox">
+                    <div class="contact-style fullHeight">
+                        <div class="whole flexbox fullHeight">
+                            <div class="left">
+                                <div class="maspfef">
+                                    <div class="annn">
+                                        <p><img src="../images/index/mapstep/mapbg-dashed-blank.png" alt=""><span
+                                                class="mark"><img src="../images/index/mapstep/mapbg-icon.png"
+                                                    alt=""></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="gijrig">
+                                    <div class="annn">
+                                        <p><img src="../images/index/frabics/fabics-blank.png" alt=""></p>
+                                    </div>
+                                    <h2>Looking for your need.</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="linkTo flexbox">
+                            <h2><a href="#">CONTACT US</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footerSet defult-w">
+                    <ol class="footNav flexbox">
+                        <li class="logo"><a href="#" title=""><img src="../images/main/logo-defalut.png" alt=""></a>
+                        </li>
+                        <li><a href="#" title="">WHO WE ARE</a></li>
+                        <li><a href="#" title="">PRODUCT</a></li>
+                        <li><a href="#" title="">NEWS</a></li>
+                        <li><a href="#" title="">CONTACT</a></li>
+                    </ol>
+                </div>
+                <a id="gotop">
+                    <div class="deffwfined flexbox">
+                        <div class="les"><span></span><span></span></div>
+                        <div class="res"><span></span><span></span></div>
+                    </div>
+                    <p>PAGE TOP</p>
+                </a>
+                <script src="../js/main.js"></script>
+            </footer>
+        </div>
+        <script src="../js/wow.js"></script>
+        <script src="../js/count/countUp.min.js"></script>
+        <script src='https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js'></script>
+        <script>
+            var nwh = $(window).height();
+            $(document).ready(function () {
+                $(window).resize(function () {
+                    var nvw = $(window).width();
+                    var nvh = $(window).height();
+                    //PC、NB 1366中最小高度保持800px
+                    if (nvw > 1340) {
+                        if (nvh < 800) {
+                            $('.object-area .fullHeight').css('min-height', '800px');
+                        } else {
+                            $('.object-area .fullHeight').css('min-height', '100vh');
+                        }
+                    } else {
+                        $('.object-area .fullHeight').css('min-height', 'initial');
+                    }
+                });
+            });
+            wow = new WOW(
+                {
+                    boxClass: 'wow',
+                    animateClass: 'animated',
+                    offset: 0,
+                    mobile: false,
+                    live: true
+                }
+            )
+            wow.init();
+            var options = {
+                useEasing: true,
+                useGrouping: true,
+                separator: ',',
+                decimal: '.',
+                prefix: '',
+                suffix: ''
+            };
+            var demo = new CountUp("myTargetElement", 1, 20, 0, 2.5, options);
+            var demo2 = new CountUp("myTargetElement2", 500, 900, 0, 2.5, options);
+            var demo3 = new CountUp("myTargetElement3", 1, 25, 0, 2.5, options);
+            $(window).scroll(function () {
+                var toph = $('#about').height() + $('.banner-area').height() - $(window).height();
+                console.log(toph);
+                //console.log($(window).scrollTop());
+                if ($(window).scrollTop() >= toph) {
+                    demo.start();
+                    demo2.start();
+                    demo3.start();
+                }
+            })
+
+            //
+            $('.slider').slick({
+                autoplay: true,
+                speed: 800,
+                fade: true,
+                lazyLoad: 'progressive',
+                arrows: false,
+                dots: false,
+            }).slickAnimation();            
+        </script>
+    </main>
+</body>
+
+</html>
