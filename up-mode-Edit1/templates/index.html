@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首頁-修改</title>
     <link rel="stylesheet" href="../css/main.css">
-    <script src='../js/jquery.3.1.0.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <link rel="shortcut icon" href="../images/main/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/animate.css">
     <!---只首頁使用---->
@@ -17,14 +17,11 @@
     <link rel="stylesheet" type="text/css" href="../css/loading/default-x.css">
     <link rel="stylesheet" type="text/css" href="../css/loading/loading.css">
     <script src="../js/slick.min.js"></script>
-    <script src='../js/slick-animation.min.js'></script>
     <link rel="stylesheet" type="text/css" href="../js/slick.css" />
     <link rel="stylesheet" type="text/css" href="../js/slick-theme.css" />
-    <!---只首頁使用 畢--->
     <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/loading/progress.js"></script>
-    <script src="../js/loading/demo-x.js"></script>
+    <!---只首頁使用 畢--->
 </head>
 
 <body class="dm-demo1 noscroll">
@@ -48,72 +45,59 @@
             </section>
         </div>
     </div>
+    <script src="../js/loading/progress.js"></script>
+    <script src="../js/loading/demo-x.js"></script>
     <script>
-        var cvw = $(window).width();
-        if (cvw > 640) {
-            var p1 = new Progress({
-                el: 'my_html', //canvas元素id
-                deg: 100, //绘制角度
-                timer: 7, //绘制时间
-                lineWidth: 5, //线宽
-                lineBgColor: '#fff', //底圆颜色
-                lineColor: '#a78774', //动态圆颜色
-                textColor: '#BBBBBB', //文本颜色
-                fontSize: 0, //字体大小
-                circleRadius: 42 //圆半径
+        //載入
+        window.onload = function () {
+            var cvw = $(window).width();
+            if (cvw > 640) {
+                var p1 = new Progress({
+                    el: 'my_html', //canvas元素id
+                    deg: 100, //绘制角度
+                    timer: 7, //绘制时间
+                    lineWidth: 5, //线宽
+                    lineBgColor: '#fff', //底圆颜色
+                    lineColor: '#a78774', //动态圆颜色
+                    textColor: '#BBBBBB', //文本颜色
+                    fontSize: 0, //字体大小
+                    circleRadius: 42 //圆半径
+                });
+
+            } else {
+                var p2 = new Progress({
+                    el: 'my_html', //canvas元素id
+                    deg: 100, //绘制角度
+                    timer: 7, //绘制时间
+                    lineWidth: 3, //线宽
+                    lineBgColor: '#fff', //底圆颜色
+                    lineColor: '#a78774', //动态圆颜色
+                    textColor: '#BBBBBB', //文本颜色
+                    fontSize: 0, //字体大小
+                    circleRadius: 37 //圆半径
+                });
+            }
+            setTimeout(
+                function () {
+                    /* Add classes on defined elements */
+                    $('.nav-el').addClass('active');
+                    $(nav).addClass('fx-box_rotate');
+
+                    /* Activate related overlay */
+                    var o_target = $('.nav-el').data('id');
+                    $('#' + o_target).addClass('active');
+
+                    /* Prevent scrolling */
+                    $("body").removeClass('noscroll');
+                    $(".wkdeom .nav-el").delay(1000).css("opacity", "1");
+                    $(".wkdeom nav span").delay(5000).css("opacity", "0");
+                    $(".tjmother").delay(7000).css("opacity", "0");
+                }, 3000
+            );
+            $(document).ready(function () {
+                $(".wkdeom").delay(5000).fadeOut(2000);
             });
-
-        } else {
-            var p2 = new Progress({
-                el: 'my_html', //canvas元素id
-                deg: 100, //绘制角度
-                timer: 7, //绘制时间
-                lineWidth: 3, //线宽
-                lineBgColor: '#fff', //底圆颜色
-                lineColor: '#a78774', //动态圆颜色
-                textColor: '#BBBBBB', //文本颜色
-                fontSize: 0, //字体大小
-                circleRadius: 37 //圆半径
-            });
-        }
-        setTimeout(
-            function () {
-                /* Add classes on defined elements */
-                $('.nav-el').addClass('active');
-                $(nav).addClass('fx-box_rotate');
-
-                /* Activate related overlay */
-                var o_target = $('.nav-el').data('id');
-                $('#' + o_target).addClass('active');
-
-                /* Prevent scrolling */
-                $("body").removeClass('noscroll');
-                $(".wkdeom .nav-el").delay(1000).css("opacity", "1");
-                $(".wkdeom nav span").delay(5000).css("opacity", "0");
-                $(".tjmother").delay(7000).css("opacity", "0");
-            }, 3000
-        );
-        $(document).ready(function () {
-            $(".wkdeom").delay(5000).fadeOut(2000);
-        });
-        var timer2
-        $(window).scroll(function () {
-            var anbox = $('#about .efe .window');
-            var anbox2 = $('.plist-circle');
-            var anbox3 = $('.news-list .bg');
-            anbox.addClass('an-move');
-            anbox2.addClass('an-move');
-            anbox3.addClass('an-move');
-            window.clearTimeout(timer2);
-
-            timer2 = window.setTimeout(function () {
-                console.log('我刪') //callback your coding
-                anbox.removeClass('an-move');
-                anbox2.removeClass('an-move');
-                anbox3.removeClass('an-move');
-            }, 400)
-        })        
-
+        };
     </script>
     <!---loading end--->
     <main>
@@ -234,20 +218,33 @@
                     </div>
                 </div>
             </div>
-            <script>
-                //
-                $('.slider').slick({
-                    autoplay: true,
-                    speed: 800,
-                    fade: true,
-                    lazyLoad: 'progressive',
-                    arrows: false,
-                    dots: false,
-                }).slickAnimation();
-
-
-            </script>
             <div class="object-area">
+                <!-- <script>
+                    $(document).scroll(function () {
+                        var anbox = $('#about .efe .window');
+                        anbox.addClass('an-move');
+                        setTimeout(function () {
+                            anbox.removeClass('an-move');
+                        }, 1800
+                        );
+                    });
+                    $(document).scroll(function () {
+                        var anbox = $('.plist-circle');
+                        anbox.addClass('an-move');
+                        setTimeout(function () {
+                            anbox.removeClass('an-move');
+                        }, 1800
+                        );
+                    });
+                    $(document).scroll(function () {
+                        var anbox = $('.news-list .bg');
+                        anbox.addClass('an-move');
+                        setTimeout(function () {
+                            anbox.removeClass('an-move');
+                        }, 1800
+                        );
+                    });
+                </script> -->
                 <div id="about" class="fullHeight">
                     <div class="defult-w">
                         <article class="about-info flexbox">
@@ -411,9 +408,30 @@
         </div>
         <script src="../js/wow.js"></script>
         <script src="../js/count/countUp.min.js"></script>
+        <script src='../js/slick-animation.min.js'></script>
         <script>
-            var nwh = $(window).height();
             $(document).ready(function () {
+                //test2
+                var timer2
+                $(window).scroll(function () {
+                    var anbox = $('#about .efe .window');
+                    var anbox2 = $('.plist-circle');
+                    var anbox3 = $('.news-list .bg');
+                    anbox.addClass('an-move');
+                    anbox2.addClass('an-move');
+                    anbox3.addClass('an-move');
+                    window.clearTimeout(timer2);
+
+                    timer2 = window.setTimeout(function () {
+                        console.log('我刪') //callback your coding
+                        anbox.removeClass('an-move');
+                        anbox2.removeClass('an-move');
+                        anbox3.removeClass('an-move');
+                    }, 400)
+                })
+
+                var nwh = $(window).height();
+
                 $(window).resize(function () {
                     var nvw = $(window).width();
                     var nvh = $(window).height();
@@ -439,6 +457,7 @@
                 }
             )
             wow.init();
+
             var options = {
                 useEasing: true,
                 useGrouping: true,
@@ -450,6 +469,7 @@
             var demo = new CountUp("myTargetElement", 1, 20, 0, 2.5, options);
             var demo2 = new CountUp("myTargetElement2", 500, 900, 0, 2.5, options);
             var demo3 = new CountUp("myTargetElement3", 1, 25, 0, 2.5, options);
+
             $(window).scroll(function () {
                 var toph = $('#about').height() + $('.banner-area').height() - $(window).height();
                 console.log(toph);
@@ -460,6 +480,16 @@
                     demo3.start();
                 }
             })
+
+            //
+            $('.slider').slick({
+                autoplay: true,
+                speed: 800,
+                fade: true,
+                lazyLoad: 'progressive',
+                arrows: false,
+                dots: false,
+            }).slickAnimation();
 
         </script>
     </main>
