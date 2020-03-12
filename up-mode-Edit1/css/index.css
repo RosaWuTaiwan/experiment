@@ -198,7 +198,8 @@ body .wkdeom{position:fixed;top:0;left:0;z-index:99;background:#fff}
 .newsStyle .newsList .news-list{margin:0}
 #product-catalog .animation-place .number-count .number,#product-catalog .animation-place .number-count>span{font-size:70px}
 .newsStyle .newsList .news-list h3,#product-catalog .catalogList .plist .category-describe{    opacity: 1;}
-#index-contact .contact-style .whole .right .annn p{background-image:none}
+#index-contact .contact-style .whole .right .annn p,
+#index-contact .contact-style .whole .left .annn p{background-image:none}
 }
 @media screen and (max-width:640px){
 #product-catalog .catalogList .plist{width:calc(100% - 20px);margin:15px 10px}
