@@ -23,21 +23,21 @@
 .stick-dots .slick-dots li.slick-active button{color:#fff;opacity:.75}
 .stick-dots .slick-dots li.slick-active button:focus,.stick-dots .slick-dots li.slick-active button:hover{opacity:1}
 @-webkit-keyframes zoomInImage{
-from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
-to{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
+0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+100%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
 }
 @keyframes zoomInImage{
-from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
-to{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
+0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+100%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
 }
 .zoomInImage{-webkit-animation-name:zoomInImage;animation-name:zoomInImage}
 @-webkit-keyframes zoomOutImage{
-from{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
-to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+0%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
+100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
 }
 @keyframes zoomOutImage{
-from{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
-to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+0%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}
+100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
 }
 .zoomOutImage{-webkit-animation-name:zoomOutImage;animation-name:zoomOutImage}
 @media screen and (max-width:1440px){
@@ -56,6 +56,6 @@ to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
 .slide .slide__content p{margin:10px 0}
 }
 @media screen and (max-width:480px){
-.slide .slide__img{zoom:1.5;top:0;-webkit-transform:none;-ms-transform:none;transform:none}
+.slide .slide__img{top:0;-webkit-transform:none;-ms-transform:none;transform:none}
 .slide .slide__content p span{font-size:30px}
 }
