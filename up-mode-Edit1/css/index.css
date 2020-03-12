@@ -198,6 +198,7 @@ body .wkdeom{position:fixed;top:0;left:0;z-index:99;background:#fff}
 .newsStyle .newsList .news-list{margin:0}
 #product-catalog .animation-place .number-count .number,#product-catalog .animation-place .number-count>span{font-size:70px}
 .newsStyle .newsList .news-list h3,#product-catalog .catalogList .plist .category-describe{    opacity: 1;}
+#index-contact .contact-style .whole .right .annn p{background-image:none}
 }
 @media screen and (max-width:640px){
 #product-catalog .catalogList .plist{width:calc(100% - 20px);margin:15px 10px}
@@ -207,6 +208,7 @@ body .wkdeom{position:fixed;top:0;left:0;z-index:99;background:#fff}
 #product-catalog .animation-place .number-count{width:100%;margin-bottom:40px}
 #product-catalog .animation-place .count-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
 #product-catalog .overCatalog{margin-bottom:0}
+
 }
 @media screen and (max-width:480px){
 .banner-info h2{font-size:30px}
