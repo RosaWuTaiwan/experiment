@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首頁-修改</title>
+    <title>首頁-第一次修改</title>
     <link rel="stylesheet" href="../css/main.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <link rel="shortcut icon" href="../images/main/favicon.ico" type="image/x-icon" />
@@ -155,12 +155,11 @@
                     </div>
                 </div>
             </header>
-            <div class="banner-area">
+            <div class="banner-area" id="deifnBanner">
                 <div class="slider">
                     <div class="slide">
                         <div class="slide__img">
-                            <img src="../images/banner/banner01.jpg" class="pcset" />
-                            <img src="../images/banner/banner01_m.jpg" class="moset" />
+                            <img src="../images/banner/banner01.jpg"/>
                         </div>
                         <div class="slide__content">
                             <p><span>T</span><span>O</span><span>　</span><span>K</span><span>N</span><span>I</span><span>T</span>
@@ -171,8 +170,7 @@
                     </div>
                     <div class="slide">
                         <div class="slide__img">
-                            <img src="../images/banner/banner02.jpg" class="pcset" />
-                            <img src="../images/banner/banner02_m.jpg" class="moset" />
+                            <img src="../images/banner/banner02.jpg"/>
                         </div>
                         <div class="slide__content">
                             <p><span>T</span><span>O</span><span>　</span><span>K</span><span>N</span><span>I</span><span>T</span>
@@ -312,7 +310,13 @@
                             <div class="right">
                                 <div class="gijrig">
                                     <div class="annn">
-                                        <p><img src="../images/index/frabics/fabics-blank.png" alt=""></p>
+                                        <div class="erigeo">
+                                            <div><img src="../images/index/frabics/fabics-1.png" alt=""></div>
+                                            <div><img src="../images/index/frabics/fabics-2.png" alt=""></div>
+                                            <div><img src="../images/index/frabics/fabics-3.png" alt=""></div>
+                                            <div><img src="../images/index/frabics/fabics-4.png" alt=""></div>
+                                        </div>
+                                        <!---<p><img src="../images/index/frabics/fabics-blank.png" alt=""></p>-->
                                     </div>
                                     <h2>Looking for your need.</h2>
                                 </div>
@@ -370,11 +374,28 @@
                 })
 
                 var nwh = $(window).height();
+                var nvw = $(window).width();
+                if (nvw < nwh) {
+                    $('#deifnBanner').attr('class', 'banner-area short');
+                }
+
                 $(window).resize(function () {
                     var nvw = $(window).width();
                     var nvh = $(window).height();
+
+                    if (nvw < nwh) {
+                        $('#deifnBanner').attr('class', 'banner-area short');
+                    }else{
+                        $('#deifnBanner').attr('class', 'banner-area');
+                    }
+
                     //PC、NB 1366中最小高度保持800px
                     if (nvw > 1340) {
+                        if (nvh < 980) {
+                            $('#about').attr('class', 'fullHeight short');
+                        } else {
+                            $('#about').attr('class', 'fullHeight');
+                        }
                         if (nvh < 800) {
                             $('.object-area .fullHeight').css('min-height', '800px');
                         } else {
@@ -422,6 +443,12 @@
                 autoplay: true,
                 speed: 2800,
                 fade: true,
+                arrows: false,
+                dots: false,
+            });
+            $('.erigeo').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
                 arrows: false,
                 dots: false,
             });
