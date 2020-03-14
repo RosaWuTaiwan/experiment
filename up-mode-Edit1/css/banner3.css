@@ -6,8 +6,8 @@
 .slide .slide__content{position:absolute;top:50%;left:5%;-webkit-transform:translate(0,-50%);transform:translate(0,-50%);width:550px}
 .slide .slide__content p{margin:20px 0}
 .slide .slide__content p span{color:#a78774;font-size:80px;font-family:Cabin,"微軟正黑體","Lucida Grande",Arial,"Arial Narrow";opacity:0;display:inline-block;transform:translateY(30px)}
-.slick-active .slide .slide__img img{-webkit-backface-visibility:hidden;-webkit-animation:imageAnimation 26s linear infinite 0s;-moz-animation:imageAnimation 26s linear infinite 0s;-o-animation:imageAnimation 26s linear infinite 0s;-ms-animation:imageAnimation 26s linear infinite 0s;animation:imageAnimation 26s linear infinite 0s;animation-iteration-count:1}
-.slick-active .slide .slide__content p span{-webkit-backface-visibility:hidden;-webkit-animation:txtUPAnimation 20s linear infinite 0s;-moz-animation:txtUPAnimation 20s linear infinite 0s;-o-animation:txtUPAnimation 20s linear infinite 0s;-ms-animation:txtUPAnimation 20s linear infinite 0s;animation:txtUPAnimation 20s linear infinite 0s;animation-iteration-count:1}
+.slick-active .slide .slide__img img{-webkit-backface-visibility:hidden;-webkit-animation:imageAnimation 25s linear infinite 0s;-moz-animation:imageAnimation 25s linear infinite 0s;-o-animation:imageAnimation 25s linear infinite 0s;-ms-animation:imageAnimation 25s linear infinite 0s;animation:imageAnimation 25s linear infinite 0s;animation-iteration-count:1}
+.slick-active .slide .slide__content p span{-webkit-backface-visibility:hidden;-webkit-animation:txtUPAnimation 18s linear infinite 0s;-moz-animation:txtUPAnimation 18s linear infinite 0s;-o-animation:txtUPAnimation 18s linear infinite 0s;-ms-animation:txtUPAnimation 18s linear infinite 0s;animation:txtUPAnimation 18s linear infinite 0s;animation-iteration-count:1}
 .slick-active .slide .slide__content p span:nth-child(2){animation-delay:.2s}
 .slick-active .slide .slide__content p span:nth-child(3){animation-delay:.4s}
 .slick-active .slide .slide__content p span:nth-child(4){animation-delay:.6s}
