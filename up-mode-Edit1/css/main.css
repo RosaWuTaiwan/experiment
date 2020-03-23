@@ -19,7 +19,7 @@ img{max-width:100%}
 .head-area{color:#b39379}
 .cis-style{position:fixed;right:25px;top:25px;width:150px;z-index:5}
 div[id^=menu-trigger] *{font-family:Poppins,sans-serif;font-size:30px}
-div[id^=menu-trigger] .txt{position:relative;width:1.8em;word-break:break-word;height:2em;line-height:100%;letter-spacing:.2em}
+div[id^=menu-trigger] .txt{position:relative;width:1.8em;word-break:break-all;height:2em;line-height:100%;letter-spacing:.2em}
 div[id^=menu-trigger] .txt .bar{position:absolute;display:block;background:#b39379;-webkit-transition:ease-in-out .2s;-o-transition:ease-in-out .2s;transition:ease-in-out .2s;width:3px;height:50%;bottom:0;right:-10px}
 #menu-trigger-close .txt .bar.bar1,#menu-trigger-open .txt .bar.bar1{bottom:initial;top:0}
 #menu-trigger-open:hover .txt .bar.bar1{-webkit-transform:rotate(-30deg) translate(0,3px);-ms-transform:rotate(-30deg) translate(0,3px);transform:rotate(-30deg) translate(0,3px)}
