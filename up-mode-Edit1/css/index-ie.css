@@ -1,1 +1,4 @@
 *::-ms-backdrop, #product-catalog .defult-w{margin: 150px auto;}
+@media screen and (max-width:768px){
+  *::-ms-backdrop, #product-catalog .defult-w{margin: 0 auto;}
+}
