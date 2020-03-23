@@ -32,7 +32,7 @@
                 $('.wrap').css('height', '100vh');
             } else {
                 let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
+                document.documentElement.style.setProperty('--vh','${vh}px');
                 $('.wrap').css('height', 'calc(var(--vh,1vh) * 100)');
             }
             device.onChangeOrientation(newOrientation => {
