@@ -16,19 +16,26 @@ header{position:absolute;right:40px;top:30px;width:150px}
 footer{position:absolute;left:40px;bottom:40px}
 .content{position:relative;width:100vw;height:100vh;display:table-cell;vertical-align:middle}
 .dontknow{width:auto;height:auto}
-.content h2{font-size:35px;text-align:center;opacity:0;transition:all ease .2s}
+.content h2{font-size:35px;text-align:center;opacity:0;-webkit-transition:all ease .2s;-o-transition:all ease .2s;transition:all ease .2s}
 .content .ann{width:250px;margin:0 auto}
-.content .ann p{margin-top:-20px;animation-duration:2.5s;animation-iteration-count:infinite;opacity:0}
-@keyframes totop{
+.content .ann p{margin-top:-20px;-webkit-animation-duration:2.5s;animation-duration:2.5s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;opacity:0}
+@-webkit-keyframes totop{
 0%{opacity:0}
-50%{opacity:1;transform:translateY(-20px)}
+50%{opacity:1;-webkit-transform:translateY(-20px);transform:translateY(-20px)}
 60%{opacity:.7}
 80%{opacity:0}
 100%{opacity:0}
 }
-.content .ann p.p2{animation-delay:.3s}
-.content .ann p.p3{animation-delay:.6s}
-.content .ann p.p4{animation-delay:.9s}
+@keyframes totop{
+0%{opacity:0}
+50%{opacity:1;-webkit-transform:translateY(-20px);transform:translateY(-20px)}
+60%{opacity:.7}
+80%{opacity:0}
+100%{opacity:0}
+}
+.content .ann p.p2{-webkit-animation-delay:.3s;animation-delay:.3s}
+.content .ann p.p3{-webkit-animation-delay:.6s;animation-delay:.6s}
+.content .ann p.p4{-webkit-animation-delay:.9s;animation-delay:.9s}
 footer ul li{line-height:90%}
 footer ul li:first-child{font-size:24px;font-weight:700;margin-bottom:10px}
 @media screen and (max-width:1280px){
