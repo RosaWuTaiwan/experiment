@@ -1,1 +1,2 @@
 .fullHeight.flexbox:after{content:'';min-height:inherit;font-size:0}
+.fullHeight.flexbox{}
