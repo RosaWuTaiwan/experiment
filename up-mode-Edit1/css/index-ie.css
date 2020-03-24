@@ -9,6 +9,8 @@
 *::-ms-backdrop, #about .about-info{position: relative;}
 *::-ms-backdrop, #about .about-info .info{position: absolute;top:calc(50% - 219px)}
 *::-ms-backdrop, .banner-area{overflow: hidden;}
+*::-ms-backdrop, #about{background: #fff;z-index: 9;}
+*::-ms-backdrop, #about .about-info .efe{right:0}
 @media screen and (max-width:768px){
   *::-ms-backdrop, #product-catalog .defult-w{margin: 0 auto;}
 }
