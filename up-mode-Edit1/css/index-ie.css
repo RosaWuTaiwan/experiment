@@ -6,6 +6,8 @@
 *::-ms-backdrop, #index-contact .contact-style .linkTo{width:180px}
 *::-ms-backdrop, .menu-content nav{position: relative;}
 *::-ms-backdrop, .menu-content nav ol{position: absolute;top:calc(50% - 219px)}
+*::-ms-backdrop, #about .about-info{position: relative;}
+*::-ms-backdrop, #about .about-info .info{position: absolute;top:calc(50% - 219px)}
 @media screen and (max-width:768px){
   *::-ms-backdrop, #product-catalog .defult-w{margin: 0 auto;}
 }
