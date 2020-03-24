@@ -20,6 +20,7 @@
     *::-ms-backdrop, #index-contact .contact-style .whole .right{padding : 0;height: 400px;}
     *::-ms-backdrop, #index-contact .contact-style .linkTo{display: block;position: relative;}
     *::-ms-backdrop, #about .about-info .info{position: absolute;top:calc(50% - 269px);left:calc(50% - 200px)}    
+    *::-ms-backdrop, .menu-content nav ol li.hasChild .sub_nav{position: static;}
 }
 @media screen and (max-width:768px){
 *::-ms-backdrop, #product-catalog .defult-w{margin: 0 auto;}
