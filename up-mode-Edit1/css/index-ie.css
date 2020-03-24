@@ -1,13 +1,13 @@
 *::-ms-backdrop, #product-catalog .defult-w{margin: 150px auto;}
 *::-ms-backdrop, .menu-content nav{position: relative;}
 *::-ms-backdrop, .menu-content nav ol{position: absolute;top:calc(50% - 219px)}
-*::-ms-backdrop, #about .about-info{position: relative;}
-*::-ms-backdrop, #about .about-info .info{position: absolute;top:calc(50% - 219px)}
 *::-ms-backdrop, .banner-area{overflow: hidden;}
 *::-ms-backdrop, #about{background: #fff;z-index: 9;}
 
 @media screen and (min-width:1025px){
     *::-ms-backdrop, #about .about-info .efe{right:0}
+    *::-ms-backdrop, #about .about-info{position: relative;}
+    *::-ms-backdrop, #about .about-info .info{position: absolute;top:calc(50% - 219px)}    
     *::-ms-backdrop, #index-contact .contact-style .whole{position: relative;}
     *::-ms-backdrop, #index-contact .contact-style .whole >div{height: 100%}
     *::-ms-backdrop, #index-contact .contact-style .whole .left{left:0;top:0;position: absolute;}
