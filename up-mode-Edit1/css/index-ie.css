@@ -23,4 +23,9 @@
 }
 @media screen and (max-width:768px){
 *::-ms-backdrop, #product-catalog .defult-w{margin: 0 auto;}
+*::-ms-backdrop, #about .about-info .info{position: absolute;top:calc(50% - 269px);}    
+}
+@media screen and (max-width:480px){
+    *::-ms-backdrop, #about .about-info .info{position: relative;top:0;left:0}    
+
 }
