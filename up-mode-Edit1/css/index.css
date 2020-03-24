@@ -54,7 +54,7 @@ body .wkdeom{position:fixed;top:0;left:0;z-index:99;background:#fff}
 .newsStyle .newsList{width:calc((90% / 3)*2)}
 .newsStyle .newsList>div{width:50%}
 .newsStyle .newsList .news-list{height:100%;margin:0 15px;position:relative;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-animation-name:fadeInRight;animation-name:fadeInRight;-webkit-box-shadow:5px 5px 7px rgba(0,0,0,.43);box-shadow:5px 5px 7px rgba(0,0,0,.43)}
-.newsStyle .newsList .news-list .bg{background-repeat:no-repeat;background-position:50%;background-size:auto 100%;position:absolute;height:100%;width:100%;z-index:-1}
+.newsStyle .newsList .news-list .bg{background-repeat:no-repeat;background-position:50%;background-size:auto 100%;position:absolute;height:100%;width:100%;z-index:-1;left: 0}
 .newsStyle .newsList .news-list .bg:after{content:'';background:rgba(0,0,0,.64);opacity:0;-webkit-transition:all ease-in-out .2s;-o-transition:all ease-in-out .2s;transition:all ease-in-out .2s;display:block;width:100%;height:100%;position:absolute;left:0;top:0}
 .newsStyle .newsList .news-list a{display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:3}
 .newsStyle .newsList .news-list h3{color:#fff;font-size:35px;-webkit-transition:all ease-in-out .2s;-o-transition:all ease-in-out .2s;transition:all ease-in-out .2s;font-weight:700;opacity:0;transition:all ease-in-out .2s;position: absolute;margin: auto;left:0;top:0;right:0;bottom:0;width: 100%;height: 37px;text-align: center;}
