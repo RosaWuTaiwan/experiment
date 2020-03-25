@@ -55,6 +55,7 @@ footer .footNav li.logo a img{width:150px}
 #gotop:hover .deffwfined .les span:first-child{-webkit-transform:translateX(1px);-ms-transform:translateX(1px);transform:translateX(1px)}
 #gotop:hover .deffwfined .res span:first-child{-webkit-transform:translateX(-1px);-ms-transform:translateX(-1px);transform:translateX(-1px)}
 #gotop p{color:#b39379;margin-top:5px}
+.lowerIE{display: none;}
 @media screen and (max-width:1680px){
 .defult-w{width:1300px}
 }
