@@ -56,6 +56,37 @@ footer .footNav li.logo a img{width:150px}
 #gotop:hover .deffwfined .res span:first-child{-webkit-transform:translateX(-1px);-ms-transform:translateX(-1px);transform:translateX(-1px)}
 #gotop p{color:#b39379;margin-top:5px}
 .lowerIE{display: none;}
+.ie10 .lowerIE{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #eadccb;
+    z-index: 999;
+    display: block;
+}
+.ie10 .lowerIE .ije{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.ie10 .lowerIE .ije p{
+    text-align: center;
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.81);
+    color: #b19068;
+    width: 400px;
+    height: 150px;
+    box-sizing: unset;
+}
+
 @media screen and (max-width:1680px){
 .defult-w{width:1300px}
 }
@@ -127,4 +158,5 @@ div[id^=menu-trigger] *{font-size:18px}
 .menu-content nav .menuListStyle h3{margin-left:0}
 .menu-content nav ol li.hasChild .sub_nav{margin-left:15px}
 .inside-cis-style{top:30px;right:20px}
+.ie10 .lowerIE .ije p{width: 300px;}
 }
