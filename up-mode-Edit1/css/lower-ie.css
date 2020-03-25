@@ -1,0 +1,34 @@
+.lowerIE{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #eadccb;
+    z-index: 999;
+    display: block;
+}
+.lowerIE .ije{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.lowerIE .ije p{
+    text-align: center;
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.81);
+    color: #b19068;
+    width: 400px;
+    height: 40px;
+    box-sizing: unset;
+}
+@media screen and (max-width:480px){
+    .lowerIE .ije p{width: 300px;}
+
+}
