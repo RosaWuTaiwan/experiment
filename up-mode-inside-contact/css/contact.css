@@ -1,0 +1,53 @@
+.contact-w{width:1128px;margin:0 auto}
+input,select{-webkit-appearance:none;-webkit-tap-highlight-color:rgba(0,0,0,0);border:none}
+button,input[type=button],input[type=reset],input[type=submit],select{-webkit-appearance:none}
+select{border-top-right-radius:0;border-top-left-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:0;-webkit-appearance:none;background-image:url(/images/selectbutton.png);background-repeat:no-repeat;background-position:95% 50%}
+button{-webkit-appearance:none;-webkit-tap-highlight-color:rgba(0,0,0,0);border:none}
+form .formList{justify-content:space-between;margin:40px 0}
+form .formList>div{width:calc(50% - 20px)}
+form .formList .list{margin:30px 0}
+form .formList .list input{display:block;width:calc(100% - 42px);background:#dcdcdc;padding:20px;font-size:18px}
+form .formList .list input::placeholder,form .formList .list textarea::placeholder{color:#c7c7c7}
+form .formList .list textarea{background:#dcdcdc;font-size:18px;padding:20px;border:0;width:calc(100% - 42px);height:203px}
+.sendbtn{text-align:center}
+.sendbtn p{text-align:center}
+.sendbtn p a{color:#b39379;display:inline-block;border:2px solid #b39379;padding:8px 25px;padding:8px 35px;transition:ease-in-out .2s;cursor:pointer}
+.sendbtn p a:hover{color:#fff;background:#b39379}
+#contact-style .part1 article h2{text-align:center}
+#contact-style .part1 article p{text-align:center}
+#contact-style .part2 article{justify-content:space-between;align-items:center}
+#contact-style .part2 .contact-info{width:45%;padding-left:40px;margin-bottom:150px}
+#contact-style .control .spanBar{right:initial;left:0}
+.object-area section.part2{padding-bottom:0}
+#contact-style .part2 .contact-info li{margin:0 0 30px}
+#contact-style .part2 .contact-info li:last-child{margin:0}
+#contact-style .part2 .contact-info li b{display:inline-block;vertical-align:middle;margin-right:20px;width:50px}
+#contact-style .part2 .contact-info li p{display:inline-block;vertical-align:middle;color:#b39379;width:calc(100% - 75px);font-size: 24px;}
+#contact-style .part2 .map{width:calc(50% - 40px)}
+#contact-style .part2 .map .border a{position:absolute;top:0;left:0;width:100%;height:100%}
+#contact-style .part2 .map .border,#contact-style .part2 .map .border p{position:relative}
+#contact-style .part2 .map .border p img{transition:ease-in-out .5s;display:block}
+#contact-style .part2 .map .border p img.hovering{opacity:0;position:absolute;top:0;left:0;z-index:2}
+#contact-style .part2 .map .border p:hover img.maining{opacity:0}
+#contact-style .part2 .map .border p:hover img.hovering{opacity:1}
+@media screen and (max-width:1280px){
+.contact-w{width:calc(100% - 60px)}
+}
+@media screen and (max-width:768px){
+form .formList>div{width:100%}
+form .formList .left .list:last-child{margin-bottom:0}
+#contact-style .part2 .contact-info{width:calc(100% - 40px);margin-bottom: 0;}
+#contact-style .part2 .map{width:100%;margin-top:40px}
+.object-area section.part2{padding-top:0}
+#contact-style .part2 .map .border p{display: inline-block;}
+#contact-style .part2 .map .border{
+    text-align: center;
+}
+#contact-style .part2 .contact-info li p{font-size: 20px;}
+}
+@media screen and (max-width:480px){
+form .formList .list{margin:20px 0}
+#contact-style .part2 .contact-info li b{width:30px;vertical-align:top}
+#contact-style .part2 .contact-info li p{width:calc(100% - 55px)}
+#contact-style .control .spanBar{left:20px}
+}
