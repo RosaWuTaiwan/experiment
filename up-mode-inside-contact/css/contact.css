@@ -50,4 +50,5 @@ form .formList .list{margin:20px 0}
 #contact-style .part2 .contact-info li b{width:30px;vertical-align:top}
 #contact-style .part2 .contact-info li p{width:calc(100% - 55px)}
 #contact-style .control .spanBar{left:20px}
+#contact-style .part2 .map .border p img{display:block}
 }
