@@ -44,6 +44,7 @@ form .formList .left .list:last-child{margin-bottom:0}
     text-align: center;
 }
 #contact-style .part2 .contact-info li p{font-size: 20px;}
+#contact-style .part2 .contact-info li p a{color: #b39379;}
 }
 @media screen and (max-width:480px){
 form .formList .list{margin:20px 0}
