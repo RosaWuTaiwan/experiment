@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+*{margin: 0;padding: 0}
+*:focus { outline: none; }/*黃框消除*/
+*{-webkit-text-size-adjust:none;}/*字體尺寸限制解除*/
+a{text-decoration:none;}
+img {border:0px; } /*圖片超連結邊框消除*/
+li{ list-style-type:none;}
+html { margin: 0; padding: 0; height: 100%; }
+body {margin: 0px;padding: 0;height: auto;font-family: Century Gothic,"微軟正黑體"; }
+
+
+
+	
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+@media screen and (min-width:751px) {
+/*會員特典黃bar*/
+.topbar{ width:100%; background-image:url(../images/vipbar.jpg); background-repeat:repeat-x; background-color:#f3e312; background-position: top center;}
+.topbar img{ display:none;}
+.topbar_main{width:1144px; height:120px; background-image:url(../images/vipbartitle.jpg); background-repeat:no-repeat; background-position:center; display:block; margin:0 auto;}
+/*會員特典黃bar*//*置頂手機版*/
+.topbar_m{ display:none;}
+
+
+.vipbanner{ background:url(../images/vipbar_pc.png) 0 0 no-repeat; width:1144px; height:120px; margin:0 auto; display: block;}
+
+/*M版本((下方))按鈕*/
+.fix_btn{ display:block;}
+.fix_btn > p{ display: none;}
+.fix_btn > .btn1{ display: none;}
+.fix_btn > .btn2{ display: none;}
+.fix_btn > .btn3{ display: none;}
+.fix_btn > .btn4{ display: none;}
+	
+
+}
+
+
+
+/* ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░分隔線 ░░░░░░░░░░░░░░░░░░░ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  */	
+
+
+
+
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+@media screen and (max-width:750px){
+
+/*會員特典黃bar*/
+.topbar{ width:100%; height:auto; margin:0 auto; background-color:#f5e11e; display: none;}
+.topbar img{ display:none;}
+.fix_btn > .topbar{ display:block;}
+.vipbanner{ background:none; width:100%; height:auto; margin:0 auto;}
+.topbar_m{ width: 100%; }
+.topbar_m a.vipbanner > img{ width: 100%; }	
+
+}

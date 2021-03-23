@@ -1,0 +1,36 @@
+.ActIndex .event-choose{margin-top:-180px}
+.ActIndex .event-choose ul li{max-width:calc((100% / 3) - 60px);margin:0 30px}
+.ActIndex .event-choose ul li:nth-child(2) p{margin:100px 0 0}
+.ActIndex .event-choose ul li:nth-child(3) p{margin:0}
+.ActIndex .event-choose ul li:nth-child(1) p{transform:translateX(0)}
+.section11.squre-shape:after,.section12.squre-shape:after,.section6.squre-shape:after,.section8.squre-shape:after{background-color:#c50034}
+.section8.squre-shape:after{background-image:url(../images/section8-bg.png);height:100%}
+.section-title{text-align:center;margin-bottom:30px}
+.ActIndex #right-nav .special-nav li a{color:#fff;background:#6a001d;background:-moz-linear-gradient(top,#6a001d 0,#930326 100%);background:-webkit-linear-gradient(top,#6a001d 0,#930326 100%);background:linear-gradient(to bottom,#6a001d 0,#930326 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a001d', endColorstr='#930326', GradientType=0 );display:block;text-align:center;padding:13px 0;font-weight:700}
+.mobile-nav .mobile-nav-control>li{display:flex;flex-wrap:wrap;align-items:center;justify-content:center}
+div[class*=ListStyle] .pie .p-name h3,div[class*=ListStyle] .pie .p-price{justify-content:center}
+.text-center{text-align:center}
+@media screen and (max-width:1440px){
+    #right-nav{top: 200px;}
+}
+@media screen and (max-width:980px){
+.ActIndex .event-choose ul li{max-width:calc((100% / 3) - 20px);margin:0 10px}
+.ActIndex .event-choose{margin-top:-130px}
+.section7 .today-special .special-items:before{display:none}
+.haveTitleBox .style3{width:100%}
+}
+@media screen and (max-width:768px){
+.mobile-nav #gotop2{position:fixed;z-index:9;top:initial;left:initial;right:20px;bottom:100px}
+.squre-shape:after{height:100%;top:45px}
+.ActIndex div[class*=ListStyle]{padding:0}
+.ActIndex div[class*=ListStyle] .pie{width:calc(50% - 6px);margin:2px}
+.ActIndex div[class*=ListStyle] .slick-slide{opacity:.5}
+.ActIndex div[class*=ListStyle] .slick-slide.slick-current{opacity:1}
+div[class*=ListStyle] .slick-prev{z-index:5}
+}
+@media screen and (max-width:640px){
+.mobile-nav #gotop2{right:10px;bottom:70px;width:50px}
+.section7 .today-special .special-items .bigTwo{width:100%}
+.section-title{margin-bottom:10px}
+.haveTitleBox .style3 .right{width:calc(100% - 90px);padding:15px 45px}
+}
