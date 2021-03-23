@@ -1,0 +1,626 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=divice-width,initial-scale=1">
+	<meta name="keywords"
+		content="電視,筆電,冰箱,空調,洗衣機,3C,家電,大家電,小家電,還元金,開學,好禮,購物節,手機,電腦,Panasonic,philips,大金,sony,LG,日立,msi,SAMSUNG,會員" />
+	<meta name="description" content=" 會員專屬優惠！門市指定家電滿5000最高送600還元金，開學送好禮指定商品買就送！" />
+	<link href="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/fbcover.jpg" rel="image_src" />
+	<meta hhttp-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!--FB meta-->
+
+	<meta property="og:site_name" content="燦坤線上購物" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="02.18-03.02 ｜Awesome Lifestyle 燦坤新生活購物節" />
+	<meta property="og:image"
+		content="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/fbcover.jpg" />
+	<meta property="og:url" content="https://events.tk3c.com/events_net/202102lifestyle/index.html" />
+	<meta property="og:description" content=" 會員專屬優惠！門市指定家電滿5000最高送600還元金，開學送好禮指定商品買就送！" />
+
+	<!--Google+ meta-->
+
+	<meta itemprop="name" content="02.18-03.02 ｜Awesome Lifestyle 燦坤新生活購物節" />
+	<meta itemprop="description" content=" 會員專屬優惠！門市指定家電滿5000最高送600還元金，開學送好禮指定商品買就送！" />
+	<meta itemprop="url" content="https://events.tk3c.com/events_net/202102lifestyle/index.html" />
+	<meta itemprop="image" content="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/fbcover.jpg" />
+	<title>02.18-03.02 ｜Awesome Lifestyle 燦坤新生活購物節</title>
+	<link href="https://events.tk3c.com/events_net/events_net/202102lifestyle/css/animate.css" rel="stylesheet" type="text/css" />
+	<link href="https://events.tk3c.com/events_net/events_net/202102lifestyle/css/2017_Style.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	<!--置頂TKEC-->
+	<script>
+		$(document).ready(function () {
+			$.ajax({
+				url: "https://events.tk3c.com/events_net/top/top.aspx?url=" + location.href,
+				type: "POST",
+				dataType: 'text',
+				success: function (msg) {
+					$("#TkecTop").html(msg);
+				}
+			});
+		});
+	</script>
+	<!-- go top-->
+	<script type="text/javascript">
+		$(function () {
+			$("#gotop").click(function () {
+				jQuery("html,body").animate({
+					scrollTop: 0
+				}, 1000);
+			});
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 300) {
+					$('#gotop').fadeIn("fast");
+				} else {
+					$('#gotop').stop().fadeOut("fast");
+				}
+			});
+		});
+	</script>
+	<!--滑動效果-->
+	<script>
+		$(function () {
+			$('.top').click(function () {
+				$('html,body').animate({ scrollTop: '0px' }, 900);
+			});
+			$('.p01').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro01').offset().top - 50 }, 900);
+			});
+
+			$('.p02').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro02').offset().top - 50 }, 900);
+			});
+
+			$('.p03').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro03').offset().top - 50 }, 900);
+			});
+			$('.p04').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro04').offset().top - 50 }, 900);
+			});
+			$('.p05').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro05').offset().top - 50 }, 900);
+			});
+			$('.p06').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro06').offset().top - 50 }, 900);
+			});
+			$('.p07').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro07').offset().top - 50 }, 900);
+			});
+			$('.p08').click(function () {
+				$('html,body').animate({ scrollTop: $('#pro08').offset().top - 50 }, 900);
+			});
+
+		});
+	</script>
+	<!--銀行區-->
+	<script>
+		$(document).ready(function () {
+			var Today = new Date();
+			var thisyear = Today.getFullYear();
+			var thismonth = '00';
+			if ((Today.getMonth() + 1) <= 9) {
+				thismonth = "0" + (Today.getMonth() + 1);
+			}
+			else {
+				thismonth = "" + (Today.getMonth() + 1);
+			}
+			var filename = thisyear + thismonth;
+			var url = "https://events.tk3c.com/events_net/events_net/banks/" + filename + "/acbank.html";
+			$.ajax({
+				url: url,
+				type: "GET",
+				dataType: 'text',
+				success: function (msg) {
+					$("#TkecFooter").html(msg);
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		function myFunction(btn) {
+			if (btn == 'btn2') {
+				document.getElementById("btn_02").className = "btn_02a";
+			}
+			else {
+				document.getElementById("btn_02").className = "btn_02";
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 快三活動bar st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+	<div id="TkecTop" style="height:45px;"></div>
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 快三活動bar end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ gotop st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+	<div id="gotop"><img src="images/scroll-top.png" /></div>
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ gotop end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 手機版本的浮動選單 st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+	<div class="fix_btn">
+		<!-- The dropdown menu begins -->
+		<div class="sample-menu-style dropdown-menu btn1">
+			<span tabindex="0" onclick="return true">優惠清單</span>
+			<div tabindex="0" onclick="return true"></div>
+			<ul>
+				<li><a href="#pro854" onclick="sampleMenu(this)">請勿入品至此區</a></li>
+				<li><a href="#pro01" onclick="sampleMenu(this)" class="p01">推薦好禮</a></li>
+				<li><a href="#pro02" onclick="sampleMenu(this)" class="p02">搶檔熱賣</a></li>
+				<li><a href="#pro03" onclick="sampleMenu(this)" class="p03">冰洗搶先降</a></li>
+				<li><a href="#pro04" onclick="sampleMenu(this)" class="p04">家事超省力</a></li>
+				<li><a href="#pro05" onclick="sampleMenu(this)" class="p05">娛樂一夏</a></li>
+				<li><a href="#pro06" onclick="sampleMenu(this)" class="p06">精選推薦</a></li>
+			</ul>
+		</div>
+		<!-- End of the dropdown menu -->
+
+		<a href="#lbsstore" class="btnbox btn3">門市在哪兒</a>
+		<a href="#" class="btnbox btn2 top">TOP</a>
+	</div>
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 手機版本的浮動選單 end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 電腦版本((右側))浮動選單 st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+	<div class="rightbtn">
+		<div class="actbtn">
+			<a href="#pro01" class="btn_01 p01">推薦好禮</a>
+			<a href="#pro02" class="btn_01 p02">搶檔熱賣</a>
+			<a href="#pro03" class="btn_01 p03">冰洗搶先降</a>
+			<a href="#pro04" class="btn_01 p04">家事超省力</a>
+			<a href="#pro05" class="btn_01 p05">娛樂一夏</a>
+			<a href="#pro06" class="btn_01 p06">精選推薦</a>
+		</div>
+	</div>
+
+
+
+	<!--右側選單 end-->
+	<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 電腦版本((右側))浮動選單 end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+	<!--/////////////////////////////////////  主視覺Banner  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+	<div class="banner">
+		<div class="building">
+			<p><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/building.png" alt=""></p>
+			<span class="flies animate__fadeInUp animate__animated animate__fast "><span
+					class="fly-wind fly-wind1"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><span
+					class="fly-wind fly-wind2"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><span
+					class="fly-wind fly-wind3"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><span
+					class="fly-wind fly-wind4"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><img
+					src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-single.png" alt=""></span>
+			<span class="flies flies2 animate__fadeInUpBig animate__animated animate__slow animate__delay-1s"><span
+					class="fly-wind fly-wind1"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><span
+					class="fly-wind fly-wind2"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><span
+					class="fly-wind fly-wind3"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><span
+					class="fly-wind fly-wind4"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-wind.png" alt=""></span><img
+					src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/fly-single.png" alt=""></span>
+		</div>
+		<div class="topic">
+			<div class="bgbg">
+				<div class="topicbox">
+					<div class="topic_part1">
+						<div class="bigbox">
+							<div class="apword">
+								<div class="anim-wrap" style="opacity:0">
+									<div class="anim-text">Awesome Lifestyle</div>
+								</div>
+								<div id="controls">
+									<select name="selectEffect" id="selectEffect" class="control">
+										<option value="fade">Fade in</option>
+									</select>
+									<div class="tip tip-effect"></div>
+								</div>
+								<div class="tip tip-type"></div>
+							</div>
+						</div>
+
+						<h3><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/topic-2.png" alt=""></h3>
+					</div>
+					<div class="topic_part2">
+						<p><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/topic-3.png" alt="" class="pcset"><img src="images/banner/topic-3-m.png" alt="" class="moset"></p>
+					</div>
+				</div>
+			</div>
+			<div class="clouds">
+				<p class="cloudFly"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/cloud1.png" alt=""></p>
+				<p class="cloudFly cloudFly2"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/cloud2.png" alt=""></p>
+				<p class="cloudFly cloudFly3"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/cloud3.png" alt=""></p>
+				<p class="cloudFly cloudFly4"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/cloud4.png" alt=""></p>
+				<p class="cloudFly cloudFly5"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/cloud5.png" alt=""></p>
+			</div>
+		</div>
+		<div class="bigslogan">
+			<div class="bgbg">
+				<div class="insidebox">
+					<div class="left">
+						<article>
+							<h4>2020年起，燦坤不一樣了</h4>
+							<h5 class="animate__pulse animate__delay-2s animate__animated">全新的店型 3A4心的服務</h5>
+							<h4>串連全省超過280家店，持續在您身邊！</h4>
+						</article>
+					</div>
+					<div class="right">
+						<article>
+							<h4>2020年起，即將再以</h4>
+							<h5 class="animate__pulse animate__delay-2s animate__animated"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/banner/topic-4.png" alt=""></h5>
+							<h4>敬&nbsp;請&nbsp;期&nbsp;待</h4>
+						</article>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="sub_banner">
+		<div class="bgbg">
+			<div class="first_slide">
+				<div class="btns swiper-container" id="pcstageBtns">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="inside_txt" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_c01.jpg);">
+								<a href="#pro1901" title="衣物護理達人"></a>
+								<article>
+									<h3>就要換然衣新</h3>
+									<h4>衣物護理達人</h4>
+									<p>衣物呵護完美對策，提供最完整的商品，滿足全家人對衣物清潔與護理需求，打造一站式服務。</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_c02.jpg);">
+								<a href="#pro1901" title="家事懶人必備"></a>
+								<article>
+									<h3>就要換然衣新</h3>
+									<h4>家事懶人必備</h4>
+									<p>懶人也能成為家事王，選對工具，用對方法就能輕鬆打造舒適居家，省時省力又省心</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_a03.jpg);">
+								<a href="#pro1898" title="四季都好用"></a>
+								<article>
+									<h3>幸福宅養成</h3>
+									<h4>四季都好用</h4>
+									<p>打造適合全家的恆溫氣候，你家就是舒適圈</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt left" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_b01.jpg);">
+								<a href="#pro1900" title="減脂家電 主廚推薦"></a>
+								<article>
+									<h3>自煮新生活</h3>
+									<h4 class="much">減脂家電 主廚推薦</h4>
+									<p>追求美味也在意家人健康也在意家人健康攝取油脂的你，讓每一口放縱的理所當然，用最少的油享受烘、烤、煎、炸最多料理可能。</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt left" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_b02.jpg);">
+								<a href="#pro1900" title="完美保鮮"></a>
+								<article>
+									<h3>自煮新生活</h3>
+									<h4>完美保鮮</h4>
+									<p>完美保留食物新鮮與美味，唯有新鮮的食材才能帶給我們健康的生活。</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_b03.jpg);">
+								<a href="#pro1900" title="智慧省電"></a>
+								<article>
+									<h3>自煮新生活</h3>
+									<h4>智慧省電</h4>
+									<p>懂你的生活習慣，智慧家電讓生活便利。</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_d01.jpg);">
+								<a href="#pro1902" title="寵愛自己組"></a>
+								<article>
+									<h3>開學進化去</h3>
+									<h4>寵愛自己組</h4>
+									<p>沒有人比你更重要！選擇自己想要的，懂得給自己最好的~</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_e01.jpg);">
+								<a href="#pro1902" title="開工提神組"></a>
+								<article>
+									<h3>開學進化去</h3>
+									<h4>開工提神組</h4>
+									<p>咖啡的濃香總能給我一份好心情，用嗅覺來聞香，用味覺來品嘗醇美，感受美好的時刻。</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt  left" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_a01.jpg);">
+								<a href="#pro1898" title="在家好幸福"></a>
+								<article>
+									<h3>幸福宅養成</h3>
+									<h4>在家好幸福</h4>
+									<p>珍惜生活中的各種小幸福，美好就在眼前</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inside_txt" style="background-image: url(https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/580x250_left_a02.jpg);">
+								<a href="#pro1902" title="除塵 level up"></a>
+								<article>
+									<h3>幸福宅養成</h3>
+									<h4>除塵 level up</h4>
+									<p>空氣品質愈發不良，家中除塵更要用心，讓家人安心地享受潔淨居家生活</p>
+									<span>點我看更多>></span>
+								</article>
+								<img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/a_blank.png" alt="">
+							</div>
+						</div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="btns swiper-container" id="pcstageBtns2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<p><a href="http://www.tk3c.com/pt.aspx?pid=210351-2021NewLife&ec=202102lifestyle" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/b1.jpg" alt=""></a></p>
+						</div>
+						<div class="swiper-slide">
+							<p><a target="_blank" href="http://www.tk3c.com/pt.aspx?pid=210440-185344&ec=202102lifestyle"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/b2.jpg" alt=""></a></p>
+						</div>
+						<div class="swiper-slide">
+							<p><a target="_blank" href="http://www.tk3c.com/pt.aspx?pid=190521&ec=202102lifestyle"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/b4.jpg" alt=""></a></p>
+						</div>
+						<div class="swiper-slide">
+							<p><a target="_blank" href="http://www.tk3c.com/pt.aspx?pid=213108&ec=202102lifestyle"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/b5.jpg" alt=""></a></p>
+						</div>
+						<div class="swiper-slide">
+							<p><a target="_blank" href="http://www.tk3c.com/pt.aspx?pid=214769&ec=202102lifestyle"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/slidebg/b6.jpg" alt=""></a></p>
+						</div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="https://events.tk3c.com/events_net/events_net/202102lifestyle/js/index.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		$(function () {
+			$(".mo-gotop").click(function () {
+				jQuery("html,body").animate({
+					scrollTop: 0
+				}, 1000);
+			});
+		});
+		var swiper2 = new Swiper('#pcstageBtns', {
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+		});
+		var swiper3 = new Swiper('#pcstageBtns2', {
+			loop: true,
+			loopFillGroupWithBlank: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+		});
+
+		//自加計時
+		setTimeout(function () {
+			document.querySelector('.anim-wrap').style.opacity = '1';
+		}, 300);
+
+	</script>
+	<!----+手機板紐---->
+	<div class="mobile-nuttons moset">
+		<p id="btnHome"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/icon-s.png"></p>
+		<p id="gotop" class="mo-gotop"><img src="https://events.tk3c.com/events_net/events_net/202102lifestyle/images/scroll-top.png" alt=""></p>
+		<p id="wstroe"><a href="">門市在哪兒</a></p>
+	</div>
+	<!--/////////////////////////////////////  主視覺  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+
+
+
+	<!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+	<div class="wrapper">
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 推薦好禮((2大4小)) st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+		<!--分類標題 st-->
+		<h2 class="protitle" id="pro01">推薦好禮</h2>
+		<!--分類標題 end-->
+		<!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  排品廣告區 st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  -->
+		<div class="list_M02 bg01" id="RTProd_ctl00_ProdUc31_SuperDiv">
+			<!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  排品廣告區 end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  -->
+			<div class="list_M bg01">
+				<!--強打2品-->
+				<div class="hotpro_wrapper">
+					<div class="hotproboxL">
+						<div class="hotpro_pro">
+							<div class="hotpro_pic">
+								<p class="icon_number">還剩<span>999</span>組</p><img src="images/pic.jpg" />
+							</div>
+							<div class="hotpromain">
+								<div class="hotpro_sale">【福利品】冷氣/除濕/涼風/空氣清新/烘衣</div>
+								<div class="hotpro_name">ZANWA晶華 五合—移動式冷氣機 ZW-LD08C</div>
+								<div class="hotpro_info">
+									<span>冷氣/除濕/涼風//空氣清新/烘衣，五機一體</span>
+									<span>採用R410A環保冷媒，是台真正冷氣</span>
+									<span>積水自動蒸發，無須排水，水滿自動停機</span>
+								</div>
+								<div class="hotpro_price1 fred">$123456</div>
+								<!--網路價--->
+								<div class="hotpro_price2">網路價$<span>123456</span></div>
+								<!--驚A爆價<div class="hotpro_price3">驚爆價</div>--->
+								<a href="#">
+									<div class="buybtn">前往購買</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="hotproboxR">
+						<div class="hotpro_pro">
+							<div class="hotpro_pic">
+								<p class="icon_number">還剩<span>999</span>組</p><img src="images/pic.jpg" />
+							</div>
+							<div class="hotpromain">
+								<div class="hotpro_sale">【福利品】冷氣/除濕/涼風/空氣清新/烘衣</div>
+								<div class="hotpro_name">ZANWA晶華 五合—移動式冷氣機 ZW-LD08C</div>
+								<div class="hotpro_info">
+									<span>冷氣/除濕/涼風//空氣清新/烘衣，五機一體</span>
+									<span>採用R410A環保冷媒，是台真正冷氣</span>
+									<span>積水自動蒸發，無須排水，水滿自動停機</span>
+								</div>
+								<div class="hotpro_price1">$123456</div>
+								<!--網路價<div class="hotpro_price2">網路價$<span>123456</span></div>--->
+								<!--驚爆價--->
+								<div class="hotpro_price3">驚爆價</div>
+								<a href="#">
+									<div class="buybtn">前往購買</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--一排4品-->
+				<div class="list_special">
+					<ul>
+						<li><a href="#">
+								<!---第1品--->
+								<p class="item_img"><img src="images/pic.jpg" /></p>
+								<h4>ECO NAVI 智慧節能科技</h4>
+								<storg>Panasonic 485公升ECONAVI雙門變頻冰箱NR-B486GV-DH(燦銀灰)</storg>
+								<div class="box_price">
+									<p class="icon_pro"><span>85</span>折</p>
+									<!--網路價---><strong class="txt_red fred"> <em>$30000</em> <i>網路價</i>999999</strong>
+								</div>
+								<!--驚爆價<strong class="txt_pur fpur"> <em>$30000</em>驚爆價</strong></div>--->
+							</a></li>
+						<li><a href="#">
+								<!---第2品--->
+								<p class="item_img"><img src="images/pic.jpg" /></p>
+								<h4>ECO NAVI 智慧節能科技</h4>
+								<storg>Panasonic 485公升ECONAVI雙門變頻冰箱NR-B486GV-DH(燦銀灰)</storg>
+								<div class="box_price">
+									<p class="icon_pro"><span>85</span>折</p>
+									<strong class="txt_red fred"> <em>$30000</em> <i>網路價</i>3500</strong>
+								</div>
+							</a></li>
+						<li><a href="#">
+								<!---第3品--->
+								<p class="item_img"><img src="images/pic.jpg" /></p>
+								<h4>ECO NAVI 智慧節能科技</h4>
+								<storg>Panasonic 485公升ECONAVI雙門變頻冰箱NR-B486GV-DH(燦銀灰)</storg>
+								<div class="box_price">
+									<p class="icon_pro"><span>85</span>折</p>
+									<strong class="txt_pur fpur"> <em>$30000</em>驚爆價</strong>
+								</div>
+							</a></li>
+						<li><a href="#">
+								<!---第4品--->
+								<p class="item_img"><img src="images/pic.jpg" /></p>
+								<h4>ECO NAVI 智慧節能科技</h4>
+								<storg>Panasonic 485公升ECONAVI雙門變頻冰箱NR-B486GV-DH(燦銀灰)</storg>
+								<div class="box_price">
+									<p class="icon_pro"><span>85</span>折</p>
+									<strong class="txt_red fred"> <em>$30000</em> <i>網路價</i>3500</strong>
+								</div>
+							</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 推薦好禮((2大4小)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+		</div>
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 活動說明((2大4小)) st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+		<!--分類標題 st-->
+		<h2 class="protitle notetitle" id="pro07">活動說明</h2>
+		<div class="event_note01 bg01 pro07">
+
+			<div class="event_note">
+				<a name="morning" id="morning"></a>
+				<p>注意事項:</p>
+				<ul>
+					<li>1.所有加購商品數量皆為限量，並限指定品項適用，加購完為止。</li>
+					<li>2.所有贈品皆為限量，並限指定品項適用，贈品送完為止。</li>
+					<li>3.線上購買之加購品與贈品將採隨機出貨制，恕不挑色。</li>
+					<li>4.贈品與加購品以燦坤線上購物活動頁公告為準，本公司保留活動變更之權利。</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 活動說明((2大4小)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+
+
+
+
+
+
+
+
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 銀行區 st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+		<div id="TkecFooter"></div>
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 銀行區 end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+		<!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 頁尾宣告 st ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+		<div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+		<!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 頁尾宣告 end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+</body>
+
+</html>
