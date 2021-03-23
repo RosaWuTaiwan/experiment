@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="生活家電,3C,折價券,購物金,現折,會員特典,筆電,手機,電腦,電視,冰箱,洗衣機,冷氣 ,全民購物節,燦坤,快3" />
+    <meta name="description" content="燦坤1月全民購物節，超強每日秒殺品，多項飆低價商品等你來搶！" />
+    <link href="https://events.tk3c.com/events_net/events_net/202001tk3c_vip/images/fbcover.png"
+        rel="image_src" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!--FB meta-->
+    <meta property="og:site_name" content="燦坤線上購物" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="燦坤1月全民購物節" />
+    <meta property="og:image"
+        content="https://events.tk3c.com/events_net/events_net/202001tk3c_vip/images/fbcover.png" />
+    <meta property="og:url" content="https://events.tk3c.com/events_net/newgoodsdm/index.aspx" />
+    <meta property="og:description" content="燦坤1月全民購物節，超強每日秒殺品，多項飆低價商品等你來搶！" />
+
+    <!--Google+ meta-->
+    <meta itemprop="name" content="燦坤1月全民購物節" />
+    <meta itemprop="description" content="燦坤1月全民購物節，超強每日秒殺品，多項飆低價商品等你來搶！" />
+    <meta itemprop="url" content="https://events.tk3c.com/events_net/newgoodsdm/index.aspx" />
+    <meta itemprop="image"
+        content="https://events.tk3c.com/events_net/events_net/202001tk3c_vip/images/fbcover.png" />
+    <title>燦坤1月全民購物節</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="css/layout.css" type="text/css" />
+    <script src="js/wow.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+    <!----正式主頁---->
+    <div class="wrapper bg-yello">
+        <header>
+            <!---插入上方選單--->
+        </header>
+        <div class="topTIME bg-black">
+            <div class="topTIME_txt flexbox color-white">
+                <h2>距離主活動<img src="images/top-mouse.png"></h2>
+                <div class="clockGo flexbox">
+                    <h3>還有</h3>
+                    <p><b>8</b>天</p>
+                    <p><b>18</b>時</p>
+                    <p><b>08</b>分</p>
+                    <p><b>08</b>秒</p>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-slogan">
+                <p class="wow"><img src="images/banner-slogan.png" alt=""></p>
+            </div>
+        </div>
+        <!----四大鈕---->
+        <div class="event-choose section1">
+            <ul class="flexbox">
+                <li class="wow">
+                    <p><a href="#tk3c11-RedEnvelope" class="tk3c11-RedEnvelope-btn"><img
+                                src="images/section1-button1-active.png" alt=""></a></p>
+                </li>
+                <li class="wow">
+                    <p><a href="#tk3c11-SinUp" class="tk3c11-SinUp-btn"><img src="images/section1-button2.png" alt=""></a>
+                    </p>
+                </li>
+                <li class="wow">
+                    <p><a href="#tk3c11-Team" class="tk3c11-Team-btn"><img src="images/section1-button3.png"
+                                alt=""></a></p>
+                </li>
+                <li class="wow">
+                    <p><a href="http://events.tk3c.com/events_net/seasonsale/index.aspx"><img src="images/section1-button4.png"
+                                alt=""></a></p>
+                </li>
+            </ul>
+        </div>
+        <!----跳窗---刮刮樂結束動畫出現獎項---->
+        <div id="wipeNow_surprise" class="jumpWindowStyle open" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-1">
+                    <h2>恭喜！您獲得</h2>
+                    <h3>1,000折價券<span>(單筆滿額＄20,000元使用)</span></h3>
+                    <h4><a href="">查詢帳戶</a></h4>
+                    <div class="share-option">
+                        <h5><img src="images/game-share-title.png" alt=""></h5>
+                        <ul class="flexbox">
+                            <li><a href="">LINE分享</a></li>
+                            <li><a href="">FB分享</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a id="close-wipeNow_surprise" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----刮刮樂---->
+        <div class="section2" id="tk3c11-RedEnvelope">
+            <div class="normal-width wow">
+                <div class="quaqua-box">
+                    <div class="qua-card">
+                        <div class="qua-card-wrap">
+                            <div id="wipe"></div>
+                            <img src="images/section2-hand2.png" class="hand2">
+                            <div id="wipeNow"><img src="images/section2-handre.png" class="hanhand"><img src="images/game-box-inside-1.png"></div>
+                        </div>
+                        <script src="js/canvas.js"></script>
+                        <script src="js/wipe.js"></script>
+                        <script>
+                            var wipeNow = document.getElementById('wipeNow');
+                            var wipeNow_surprise = document.getElementById('wipeNow_surprise');
+                            function wipeNow_Fun(){
+                                var wipe = new Wipe({
+                                    el: '#wipe',
+                                    fg: 'images/game-box-inside-1.png',
+                                    size: 45,
+                                    debug: false,
+                                    autoWipe: true,
+                                        data: ["pause",
+
+{"x":105,"y":175},
+{"x":123,"y":165},
+{"x":149,"y":152},
+{"x":177,"y":140},
+{"x":205,"y":129},
+{"x":226,"y":118},
+{"x":241,"y":111},
+{"x":251,"y":106},
+{"x":256,"y":105},
+{"x":257,"y":105},
+{"x":258,"y":106},
+{"x":254,"y":110},
+{"x":242,"y":116},
+{"x":228,"y":125},
+{"x":206,"y":141},
+{"x":174,"y":163},
+{"x":142,"y":183},
+{"x":107,"y":201},
+{"x":81,"y":216},
+{"x":55,"y":227},
+{"x":37,"y":237},
+{"x":27,"y":243},
+{"x":22,"y":247},
+{"x":21,"y":249},
+{"x":22,"y":249},
+{"x":29,"y":247},
+{"x":40,"y":240},
+{"x":55,"y":231},
+{"x":74,"y":222},
+{"x":105,"y":204},
+{"x":131,"y":191},
+{"x":163,"y":177},
+{"x":204,"y":160},
+{"x":228,"y":147},
+{"x":245,"y":141},
+{"x":257,"y":135},
+{"x":263,"y":133},
+{"x":268,"y":130},
+{"x":267,"y":133},
+{"x":262,"y":138},
+{"x":256,"y":146},
+{"x":248,"y":155},
+{"x":236,"y":166},
+{"x":217,"y":181},
+{"x":210,"y":192},
+{"x":190,"y":209},
+{"x":171,"y":222},
+{"x":157,"y":231},
+{"x":143,"y":243},
+{"x":133,"y":249},
+{"x":127,"y":255},
+{"x":122,"y":258},
+{"x":121,"y":260},
+{"x":123,"y":260},
+{"x":132,"y":255},
+{"x":149,"y":243},
+{"x":171,"y":227},
+{"x":196,"y":209},
+{"x":223,"y":194},
+{"x":252,"y":177},
+{"x":278,"y":165},
+{"x":303,"y":154},
+{"x":321,"y":146},
+{"x":332,"y":140},
+{"x":338,"y":138},
+{"x":339,"y":138},
+{"x":338,"y":141},
+{"x":328,"y":146},
+{"x":317,"y":153},
+{"x":304,"y":161},
+{"x":280,"y":174},
+{"x":251,"y":189},
+{"x":222,"y":207},
+{"x":190,"y":224},
+{"x":155,"y":244},
+{"x":131,"y":263},
+{"x":104,"y":277},
+{"x":94,"y":285},
+{"x":84,"y":292},
+{"x":78,"y":295},
+{"x":77,"y":295},
+{"x":83,"y":292},
+{"x":94,"y":286},
+{"x":107,"y":279},
+{"x":130,"y":267},
+{"x":151,"y":256},
+{"x":176,"y":247},
+{"x":200,"y":236},
+{"x":225,"y":225},
+{"x":262,"y":208},
+{"x":282,"y":198},
+{"x":302,"y":191},
+{"x":313,"y":185},
+{"x":319,"y":183},
+{"x":321,"y":182},
+{"x":319,"y":184},
+{"x":316,"y":189},
+{"x":308,"y":195},
+{"x":298,"y":204},
+{"x":285,"y":214},
+{"x":268,"y":227},
+{"x":241,"y":245},
+{"x":214,"y":264},
+{"x":189,"y":281},
+{"x":170,"y":292},
+{"x":157,"y":301},
+{"x":144,"y":308},
+{"x":138,"y":312},
+{"x":135,"y":313},
+{"x":133,"y":315},
+{"x":135,"y":316},
+{"x":145,"y":316},
+{"x":156,"y":312},
+{"x":172,"y":305},
+{"x":190,"y":295},
+{"x":213,"y":286},
+{"x":242,"y":272},
+{"x":267,"y":263},
+{"x":287,"y":254},
+{"x":307,"y":245},
+{"x":324,"y":239},
+{"x":342,"y":232},
+{"x":354,"y":229},
+{"x":359,"y":228},
+{"x":362,"y":228},
+{"x":363,"y":228},
+{"x":361,"y":232},
+{"x":356,"y":238},
+{"x":346,"y":247},
+{"x":335,"y":257},
+{"x":313,"y":270},
+{"x":291,"y":284},
+{"x":270,"y":298},
+{"x":251,"y":312},
+{"x":228,"y":327},
+{"x":212,"y":340},
+{"x":195,"y":353},
+{"x":186,"y":359},
+{"x":177,"y":365},
+{"x":171,"y":370},
+{"x":170,"y":372},
+{"x":169,"y":372},
+{"x":174,"y":370},
+{"x":181,"y":362},
+{"x":189,"y":354},
+{"x":198,"y":344},
+{"x":209,"y":335},
+{"x":221,"y":325},
+{"x":247,"y":310},
+{"x":268,"y":300},
+{"x":289,"y":290},
+{"x":314,"y":280},
+{"x":339,"y":271},
+{"x":358,"y":261}],
+                                    onswiping: function (percent) {
+                                        if (percent <= 0) return;
+                                    },        
+                                })
+                                wipeNow.style.display = "none";   
+                                $('.qua-card-wrap').addClass('mystyle');
+                                function surpriseFunc(){
+                                    //驚喜!內容
+                                    wipeNow_surprise.style.display = "flex";
+                                }
+                                setTimeout(surpriseFunc, 2800);
+                            }
+                            wipeNow.addEventListener("click", wipeNow_Fun);
+                        </script>                                                
+                    </div>
+                    <div class="qua-txt"><img src="images/game-box-txt.png" alt=""></div>
+                    <div class="qua-check">
+                        <div class="shareNow flexbox">
+                            <ul class="rules flexbox">
+                                <li class="tk3c-button">
+                                    <p class="tk3c-button-txt" id="redEnvelope-rule">遊戲說明</p>
+                                </li>
+                                <li class="tk3c-button red">
+                                    <p class="tk3c-button-txt check-coupon">查看我的獎勵</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----跳窗---刮刮樂遊戲規則---->
+        <div id="redEnvelope-rule-box" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="redEnvelope-rule-content jumpWindowStyle-content">
+                <h2>神券刮刮樂 遊戲說明</h2>
+                <article>
+                    活動期間：2020/1/10 – 2020/1/14<br>
+                    折價券使用期間：2020/1/15 – 2020/1/19<br><br>
+                    
+                    1.	神券刮刮樂獲得之折價券活動僅限「燦坤線上購物會員」參加，獲得之折價券將由系統直接歸戶至會員帳號(匯入帳戶)。非會員則需先註冊後始可獲得活動資格。<br>
+                    2.	折價券僅可使用於燦坤線上購物，無法使用於燦坤實體門市。<br>
+                    3.  一張折價券僅限使用乙次，須於指定使用期限內使用完畢，逾期則自動失效，恕不補發。<br>
+                    4. 每筆訂單(每張發票)限使用乙張折價券，且結帳金額須依各折價券消費滿額門檻限制使用。<br>
+                    5. 如使用折價券購買商品，並有取消訂單/辦理退、換貨之情形，恕不再補發折價券並僅退還原實際付款金額。(提醒：單筆訂單無法辦理部分商品取消訂單/辦理退、換貨)<br>
+                    6. 折價券惟有點數卡、APPLE商品及部分指定商品無法抵用，其餘商品皆可使用。<br>
+                    7. 根據個人資料保護法，參加者同意燦坤線上購物於本活動目的範圍進行蒐集、處理及利用其個人資料；如參加者如欲閱覽、變更、刪除個資或要求停止蒐集、處理及利用個人資料，請通知燦坤線上購物辦理。<br>
+                    8. 燦坤線上購物保留此活動之修改、變更之權利。                    
+                </article>
+                <a id="close-redEnvelope-rule-box" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----跳窗---獎項查詢---->
+        <div id="wipeNow_surprise_already" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-2">
+                    <h5><img src="images/game-type2-img.png" alt=""></h5>
+                    <h2>恭喜！您獲得</h2>
+                    <h3>1,000折價券<span>(單筆滿額＄20,000元使用)</span></h3>
+                    <div class="choose-option">
+                        <ul class="flexbox">
+                            <li><a href="">查詢帳戶</a></li>
+                            <li><a href="">繼續玩下去</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a id="close-wipeNow_surprise_already" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----跳窗---明天再來---->
+        <div id="wipeNow_surprise_nochance" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-3">
+                    <h5><img src="images/game-type3-img.png" alt=""></h5>
+                    <h2>明天還有兩次機會，<br>記得再回來喔～</h2>
+                    <p><a href="">查詢帳戶</a></p>
+                </div>
+                <a id="close-wipeNow_surprise_nochance" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----跳窗---以放進你的會員帳戶裡---->
+        <div id="wipeNow_surprise_inside" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-2">
+                    <h5><img src="images/game-type2-img.png" alt=""></h5>
+                    <h2>小老鼠已偷偷將禮物放到你的會員帳戶囉！</h2>
+                    <div class="choose-option">
+                        <ul class="flexbox">
+                            <li><a href="">查詢帳戶</a></li>
+                            <li><a href="">繼續玩下去</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a id="close-wipeNow_surprise_inside" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----跳窗---今天折價全發完了---->
+        <div id="wipeNow_surprise_gameover" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-2">
+                    <h5><img src="images/game-type5-img.png" alt=""></h5>
+                    <h2>Sorry...</h2>
+                    <h3>今日折價券<br>已發送完畢</span></h3>
+                    <div class="choose-option">
+                        <ul class="flexbox">
+                            <li><a href="" class="tk3c11-SinUp-btn" style="font-weight: bold;">玩玩其他遊戲吧!</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a id="close-wipeNow_surprise_gameover" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----百萬購物金簽到---->
+        <div class="section4 squre-shape" id="tk3c11-SinUp">
+            <div class="normal-width wow">
+                <div class="section-title section-title flexbox">
+                    <p class="border-style"><span></span></p>
+                    <h2>累計簽到<b>天天鼠＄</b></h2>
+                    <p class="border-style"><span></span></p>
+                </div>
+                <!----
+                *****百萬購物金簽到狀態 img檔名前.png規則****
+                一般當天可簽到不會有後綴     例:section4-calendar-day3.png
+                got.png已過              例:section4-calendar-day1-got.png
+                none.png不可領              例:section4-calendar-day1-none.png
+                ---->
+                <!---未登入的條件下 class需加 +fadeWaySibling--->
+                <ul class="daily-signup flexbox">
+                    <li>
+                        <a href=""><img src="images/section4-calendar-day1-got.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/section4-calendar-day2.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/section4-calendar-day3-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/section4-calendar-day4-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/section4-calendar-day5-none.png" alt=""></a>
+                    </li>
+                </ul>
+                <!---未登入的條件下 class需加 +fadeWaySibling--->
+                <div class="rules">
+                    <ul class="flexbox">
+                        <li class="tk3c-button">
+                            <p class="tk3c-button-txt" id="daily-signup-rule">遊戲說明</p>
+                        </li>
+                        <li class="tk3c-button black">
+                            <p class="tk3c-button-txt check-coupon">查看我的獎勵</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fadeWay">
+                <div class="fadeWay-txt flexbox">
+                    <div class="cecec">
+                        <h3><img src="images/section4-notsignin-icon.png" alt="">您尚未登入喔!</h3>
+                        <p><a class="check-coupon"><img src="images/section4-notsignin.png" alt=""></a></p>
+                    </div>
+                </div>
+            </div>
+            <!---未登入的條件下 +整塊fadeWay DIV--->
+            <!---已登入--不須出現此塊
+            <div class="fadeWay">
+                <div class="fadeWay-txt flexbox">
+                    <div class="cecec">
+                        <h3><img src="images/section4-notsignin-icon.png" alt="">您尚未登入喔!</h3>
+                        <p><a class="check-coupon"><img src="images/section4-notsignin.png" alt=""></a></p>
+                    </div>
+                </div>
+            </div>
+            --->
+        </div>
+        <!----跳窗---百萬購物金簽到規則---->
+        <div id="daily-signup-rule-box" class="jumpWindowStyle " style="display:none;">
+            <div class="bg"></div>
+            <div class="daily-signup-rule-content jumpWindowStyle-content">
+                <h2>百萬購物金簽到說明</h2>
+                <article>
+                    簽到時間：2020/1/10 – 2020/1/14<br>
+                    使用時間：領取後14天內須使用完畢<br><br>
+                    
+                    1. 燦坤線上購物會員活動獲得之購物金將直接匯入帳戶；非會員獲得購物金時，至會員中心使用參加活動填寫之資料註冊即可匯入帳戶。<br>
+                    2. 購物金優惠僅適用燦坤線上購物，不可與其他優惠活動並行。<br>
+                    3. 購物金於若超過使用期限未使用完畢，將直接歸零，恕不歸還。<br>
+                    4. 活動需連續簽到，方可獲得購物金。<br>
+                    5. 如使用購物金購買商品後辦理退貨，此購物金將視為已使用，不再另外補發。<br>
+                    6. 根據個人資料保護法，參加者同意燦坤線上購物於本活動目的範圍進行蒐集、處理及利用其個人資料。<br>
+                    7. 燦坤線上購物保留此活動之修改、變更之權利。                    
+                </article>
+                <a id="close-daily-signup-rule-box" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----組隊領好康---->
+        <div class="section3 squre-shape" id="tk3c11-Team">
+            <div class="biggest-width wow">
+                <div class="normal-width">
+                    <div class="section-title flexbox">
+                        <p class="border-style"><span></span></p>
+                        <h2>組隊揪5友!<b>限量送$500折價券</b></h2>
+                        <p class="border-style"><span></span></p>
+                    </div>
+                    <!---已額滿的條件下 class需加 +fadeWaySibling--->
+                    <div class="info">
+                        <ul class="icons flexbox">
+                            <!----判斷已達成狀態並在img.png結尾前加入"ready"---->
+                            <li>
+                                <img src="images/section2-game-icon-1-ready.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/section2-game-icon-2-ready.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/section2-game-icon-3.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/section2-game-icon-4.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/section2-game-icon-5.png" alt="">
+                            </li>
+                        </ul>
+                        <h4>**成功達成5位揪友，折價券將由系統自動匯入帳戶**</h4>
+                        <div class="shareNow flexbox">                            
+                            <div>
+                                <p id="team-friend"><img src="images/bt_share.png" alt=""></p>
+                            </div>
+                            <ul class="rules flexbox">
+                                <li class="tk3c-button">
+                                    <p class="tk3c-button-txt" id="team-rule">遊戲說明</p>
+                                </li>
+                                <li class="tk3c-button red">
+                                    <p class="tk3c-button-txt check-coupon">查看我的獎勵</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!---已額滿的條件下 +整塊fadeWay DIV--->
+                    <!---非額滿時不須出現此塊
+                    <div class="fadeWay">
+                        <div class="fadeWay-bg"></div>
+                        <div class="fadeWay-txt">
+                            <p>活動已額滿</p>
+                        </div>
+                    </div>
+                    --->
+                </div>
+            </div>
+            <div class="fadeWay">
+                <div class="fadeWay-txt flexbox">
+                    <div class="cecec">
+                        <h3><img src="images/section4-notsignin-icon.png" alt="">很抱歉 活動已額滿</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!---未登入的條件下 +整塊fadeWay DIV--->
+            <!---已登入--不須出現此塊
+            <div class="fadeWay">
+                <div class="fadeWay-txt flexbox">
+                    <div class="cecec">
+                        <h3><img src="images/section4-notsignin-icon.png" alt="">很抱歉 活動已額滿!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        <!----跳窗---組隊領好康遊戲規則---->
+        <div id="team-rule-box" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="team-rule-content jumpWindowStyle-content">
+                <h2>組隊領好康遊戲說明</h2>
+                <article>
+                    活動時間：2020/1/10 – 2020/1/14<br>
+                    使用時間：2020/1/15 – 2020/1/19<br><br>
+                    
+                    1. 活動期間內需5位好友點擊進個人專屬連結，並登入(註冊成功)即可成為隊友。<br>
+                    2. 個人專屬連結於頁面上點選分享即可產生，並將該連結傳送給好友進行組隊。<br>
+                    3. 組隊揪友領好康獲得之折價券活動僅限「燦坤線上購物會員」參加，獲得之折價券將由系統直接歸戶至會員帳號(匯入帳戶)。非會員則需先註冊後始可獲得活動資格。<br>
+                    4. 一張折價券僅限使用乙次，須於指定使用期限內使用完畢，逾期則自動失效，恕不補發。<br>
+                    5. 折價券僅可使用於燦坤線上購物，無法使用於燦坤實體門市。<br>
+                    6. 每筆訂單(每張發票)限使用乙張折價券，且結帳金額須符合滿額門檻$10,000元以上方可使用。(例：如欲使用500元之折價券，則結帳金額須至少為$10,000元)<br>
+                    7. 如使用折價券購買商品，有取消訂單/辦理退、換貨之情形，恕不再補發現金抵用券並僅退還原實際付款金額。(提醒：單筆訂單無法辦理部分商品取消訂單/辦理退、換貨)<br>
+                    8. 線上使用之折價券惟有點數卡、APPLE商品及部分指定商品無法抵用，其餘商品皆可使用。<br>
+                    9. 根據個人資料保護法，參加者同意燦坤線上購物於本活動目的範圍進行蒐集、處理及利用其個人資料；如參加者如欲閱覽、變更、刪除個資或要求停止蒐集、處理及利用個人資料，請通知燦坤線上購物辦理。<br>
+                    10. 燦坤線上購物保留此活動之修改、變更之權利。
+                </article>
+                <a id="close-team-rule-box" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!----跳窗---組隊領好康揪友---->
+        <div id="team-friend-box" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="team-friend-content jumpWindowStyle-content">
+                <div class="surprise-style type-3">
+                    <h5><img src="images/game-type4-img.png" alt=""></h5>
+                    <h2>立即分享 賺折價券</h2>
+                    <ul>
+                        <li><a href="">我要LINE分享</a></li>
+                        <li><a href="">我要FB分享</a></li>
+                    </ul>
+                </div>
+                <a id="close-team-friend-box" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <!------漂浮右選單------>
+        <aside id="right-nav">
+            <ul class="nav-list">
+                <li>
+                    <div class="rn-title">
+                        <p>全民購物節<br>暖身慶</p>
+                    </div>
+                    <ol>
+                        <li><a class="tk3c11-RedEnvelope-btn">神券刮刮樂<br>最高送＄5,000</a></li>
+                        <li><a class="tk3c11-SinUp-btn">天天簽到<br>最高送＄1,000</a></li>
+                        <li><a class="tk3c11-Team-btn">組隊揪友<br>搶＄500</a></li>
+                        <li><a href="http://events.tk3c.com/events_net/seasonsale/index.aspx">年度大賞<br>偷跑開搶</a></li>
+                        <li><a href="https://events.tk3c.com/events_net/events_net/202001tk3c_vip/dm.html" target="_blank">
+                                <img src="images/right-side-nav-list-style-book.png" alt="">
+                                <div class="plus">
+                                    手冊<br>線上看
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+                </li>               
+            </ul>
+            <a href="javascript:goTop();" id="gotop"><img src="images/gotop.png" alt=""></a>
+        </aside>
+        <!------手機板下方選單------>
+        <div class="mobile-nav">
+            <ul class="mobile-nav-control flexbox">
+                <li>
+                    <div class="fixed-title flexbox">
+                        <div class="fixed-topic">
+                            玩遊戲<b>搶好康</b>
+                        </div>
+                    </div>
+                    <div class="hidden-category">
+                        <ol>
+                            <li><a class="tk3c11-RedEnvelope-btn">神券刮刮樂</a></li>
+                            <li><a class="tk3c11-SinUp-btn">天天簽到領＄</a></li>
+                            <li><a class="tk3c11-Team-btn">組隊揪友搶券</a></li>
+                            <li><a href="https://events.tk3c.com/events_net/events_net/202001tk3c_vip/dm.html" target="_blank">★手冊線上看★</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <div class="fixed-title flexbox">
+                        <div class="fixed-topic">
+                            年度大賞<b>偷跑開搶</b>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!----跳窗---所有簽到登入---->
+        <div id="check-coupon-box" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="check-coupon-content jumpWindowStyle-content">
+                <article>
+                    <div class="midbox">
+                        <form action="">
+                            <div class="midbg">
+                                <div class="title-pop">會員登入</div>
+                                <div class="fontbox">
+                                    <div id="userInput" class="normal-input"><input
+                                            name="ctl00$ContentPlaceHolder1$txtstep1_email" type="text"
+                                            id="ctl00_ContentPlaceHolder1_txtstep1_email" tabindex="1"
+                                            placeholder="請輸入註冊E-mail" class="box_login icon_person">
+                                        <ul class="keywordMail" style="display: none;"></ul>
+                                    </div>
+                                    <div class="normal-input" id="userInput2">
+                                        <a href="javascript:void(0)" class="passChange"
+                                            style="background: url(&quot;https://www.tk3c.com/images/see1.png&quot;) 0% 0% / 35px no-repeat;"></a>
+                                        <input name="ctl00$ContentPlaceHolder1$txt_password" type="password"
+                                            maxlength="16" id="ctl00_ContentPlaceHolder1_txt_password" tabindex="1"
+                                            class="box_login icon_password" placeholder="請輸入8-16 英數密碼"
+                                            onkeydown="onkeystep2()">
+                                    </div>
+                                    <div class="checkCodeBox flexbox">
+                                        <div>驗證碼</div>
+                                        <div><input name="ctl00$ContentPlaceHolder1$txt_verify" type="text"
+                                                maxlength="6" id="ctl00_ContentPlaceHolder1_txt_verify" tabindex="2"
+                                                minlength="6" laceholder="請輸入右方數字" class="box_password"
+                                                onkeydown="onkeystep2()"></div>
+                                        <div><img id="ctl00_ContentPlaceHolder1_img_VerifyCode" alt="驗證碼" onclick=""
+                                                src="../verify/VerifyCode.aspx"
+                                                style="border-width:0px;height: 44px; width: 95%; border-width: 0px; float: right;">
+                                        </div>
+                                        <div><a href="javascript:void(0)" onclick="refresh_verify_code()">
+                                                <img src="https://www.tk3c.com/images/member_code_reload.png" border="0"
+                                                    style="height: 44px; line-height: 44px;"></a></div>
+                                    </div>
+                                    <div class="loginStyleOne"><input type="submit"
+                                            name="ctl00$ContentPlaceHolder1$btn_step1_ok" value="Email帳號登入"
+                                            onclick="return checkstep1();" id="ctl00_ContentPlaceHolder1_btn_step1_ok"
+                                            class="bg_yellow" style="height: 44px;border: 0 ; box-shadow: none;"> ｜
+                                        <a style="color:blue;cursor:pointer;"
+                                            onclick="javascript:$('html,body').animate({scrollTop:$('#divRegister').offset().top}, 800);">立即加入會員</a>
+                                    </div>
+                                    <div class="loginStyleTwo">
+                                        <input type="submit" name="ctl00$ContentPlaceHolder1$member_login_fb_btn"
+                                            value="使用 facebook 快速登入"
+                                            onclick="this.disabled = true; __doPostBack('ctl00$ContentPlaceHolder1$member_login_fb_btn','');"
+                                            id="ctl00_ContentPlaceHolder1_member_login_fb_btn"
+                                            class="member_btn bg_fbblue font_white">
+                                        <input type="submit" name="ctl00$ContentPlaceHolder1$member_login_line_btn"
+                                            value="使用 line 快速登入"
+                                            onclick="this.disabled = true; __doPostBack('ctl00$ContentPlaceHolder1$member_login_line_btn','');"
+                                            id="ctl00_ContentPlaceHolder1_member_login_line_btn"
+                                            class="member_btn bg_linegreen font_white">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+                <a id="close-check-coupon-box" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <footer>
+            <!---請插頁腳--->
+        </footer>
+    </div>
+    <script src="js/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <script>
+        $(document).ready(function () {
+            wow = new WOW(
+                {
+                    boxClass: 'wow',
+                    animateClass: 'animated',
+                    offset: 0,
+                    mobile: false,
+                    live: true
+                }
+            )
+            wow.init();
+            $("#right-nav").hide();
+            $(function () {
+                var height = $(document).height();
+                var wheight = $(window).height();
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 300) {
+                        $('#right-nav').fadeIn();
+                    } else {
+                        $('#right-nav').fadeOut();
+                    }
+                });
+                $('#gotop').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 'fast');
+                    return false;
+                });
+            });
+            $('#redEnvelope-rule').click(function () {
+                $('#redEnvelope-rule-box').addClass('open').fadeIn();
+                $('#close-redEnvelope-rule-box').click(function () {
+                    $('#redEnvelope-rule-box').removeClass('open').fadeOut();
+                });
+            });
+            $('#team-rule').click(function () {
+                $('#team-rule-box').addClass('open').fadeIn();
+                $('#close-team-rule-box').click(function () {
+                    $('#team-rule-box').removeClass('open').fadeOut();
+                });
+            });
+            $('#team-friend').click(function () {
+                $('#team-friend-box').addClass('open').fadeIn();
+                $('#close-team-friend-box').click(function () {
+                    $('#team-friend-box').removeClass('open').fadeOut();
+                });
+            });
+            $('#daily-signup-rule').click(function () {
+                $('#daily-signup-rule-box').addClass('open').fadeIn();
+                $('#close-daily-signup-rule-box').click(function () {
+                    $('#daily-signup-rule-box').removeClass('open').fadeOut();
+                });
+            });
+            $('.check-coupon').click(function () {
+                $('#check-coupon-box').addClass('open').fadeIn();
+                $('#close-check-coupon-box').click(function () {
+                    $('#check-coupon-box').removeClass('open').fadeOut();
+                });
+            });
+
+            $('a.tk3c11-RedEnvelope-btn').click(function () {
+                var top = $('#tk3c11-RedEnvelope').offset().top;
+                $('body,html').stop().animate({ scrollTop: top }, 800);
+                return false;
+            });
+            $('a.tk3c11-Team-btn').click(function () {
+                var top = $('#tk3c11-Team').offset().top;
+                $('body,html').stop().animate({ scrollTop: top }, 800);
+                return false;
+            });
+            $('a.tk3c11-SinUp-btn').click(function () {
+                var top = $('#tk3c11-SinUp').offset().top;
+                $('body,html').stop().animate({ scrollTop: top }, 800);
+                return false;
+            });
+            $('a.tk3c11-Hundred-btn').click(function () {
+                var top = $('#tk3c11-Hundred').offset().top;
+                $('body,html').stop().animate({ scrollTop: top }, 800);
+                return false;
+            });
+            $('a.tk3c11-Reciprocal-btn').click(function () {
+                var top = $('#tk3c11-Reciprocal').offset().top;
+                $('body,html').stop().animate({ scrollTop: top }, 800);
+                return false;
+            });
+            $('#close-wipeNow_surprise').click(function () {
+                    $('#wipeNow_surprise').removeClass('open').fadeOut();
+            });
+            //跳窗-已獲得 觸發按鈕class請加上wipeNow_surprise_already-btn
+            $('.wipeNow_surprise_already-btn').click(function () {
+                $('#wipeNow_surprise_already').addClass('open').fadeIn();
+                $('#close-wipeNow_surprise_already').click(function () {
+                    $('#wipeNow_surprise_already').removeClass('open').fadeOut();
+                });
+            });
+            //跳窗-明天再來 觸發按鈕class請加上wipeNow_surprise_nochance-btn
+            $('.wipeNow_surprise_nochance-btn').click(function () {
+                $('#wipeNow_surprise_nochance').addClass('open').fadeIn();
+                $('#close-wipeNow_surprise_nochance').click(function () {
+                    $('#wipeNow_surprise_nochance').removeClass('open').fadeOut();
+                });
+            });
+            //跳窗-以放進你帳戶 觸發按鈕class請加上wipeNow_surprise_inside-btn
+            $('.wipeNow_surprise_inside-btn').click(function () {
+                $('#wipeNow_surprise_inside').addClass('open').fadeIn();
+                $('#close-wipeNow_surprise_inside').click(function () {
+                    $('#wipeNow_surprise_inside').removeClass('open').fadeOut();
+                });
+            });
+
+            //跳窗-今天折價券已送完 觸發按鈕class請加上wipeNow_surprise_gameover-btn
+            $('.wipeNow_surprise_gameover-btn').click(function () {
+                $('#wipeNow_surprise_gameover').addClass('open').fadeIn();
+                $('#close-wipeNow_surprise_gameover').click(function () {
+                    $('#wipeNow_surprise_gameover').removeClass('open').fadeOut();
+                });
+            });
+
+            $('.mobile-nav ul li .fixed-title').click(function () {
+                var $self = $(this);
+                $self.next("div.hidden-category").slideToggle('fast', function () {
+                    $('body').addClass('m-nav-openNow');
+                    $self.parent('li').toggleClass('current');
+                    if ($self.parent('li').attr('class') == ('current')) {
+                        $self.parent('li').siblings().children("div.hidden-category").slideUp("fast");
+                        $self.parent('li').siblings().attr('class', '');
+                    }
+                });
+                $(document).click(function(e){
+                    if($('body').attr('class') == ('m-nav-openNow')){
+                        var divTop = $('.mobile-nav ul li.current');
+                        if(!divTop.is(e.target) && divTop.has(e.target).length === 0){
+                            $('body').removeClass('m-nav-openNow');
+                            $('.mobile-nav ul li').children("div.hidden-category").css('display', 'none');
+                            $('.mobile-nav ul li.current').removeClass('current');
+
+                        }
+                    }
+                })
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
