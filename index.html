@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="生活家電,3C,折價券,抵用券,購物金,現折,會員特典,筆電,手機,電腦,電視,冰箱,洗衣機,冷氣,全民購物節,燦坤,快3" />
+    <meta name="description" content="燦坤4月超狂暖身慶，整點搶超狂現金券，天天簽到最高送$1366，限時限量，搶券趁現在！" />
+    <link href="https://events.tk3c.com/events_net/events_net/202004tk3c_vip/images/fbcover.png" rel="image_src" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!--FB meta-->
+    <meta property="og:site_name" content="燦坤線上購物" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="燦坤4月超狂暖身慶！" />
+    <meta property="og:image"
+        content="https://events.tk3c.com/events_net/events_net/202004tk3c_vip/images/fbcover.png" />
+    <meta property="og:url" content="https://events.tk3c.com/events_net/newgoodsdm/index.aspx" />
+    <meta property="og:description" content="燦坤4月超狂暖身慶，整點搶超狂現金券，天天簽到最高送$1366，限時限量，搶券趁現在！" />
+
+    <!--Google+ meta-->
+    <meta itemprop="name" content="燦坤4月超狂暖身慶！" />
+    <meta itemprop="description" content="燦坤4月超狂暖身慶，整點搶超狂現金券，天天簽到最高送$1366，限時限量，搶券趁現在！" />
+    <meta itemprop="url" content="https://events.tk3c.com/events_net/newgoodsdm/index.aspx" />
+    <meta itemprop="image" content="https://events.tk3c.com/events_net/events_net/202004tk3c_vip/images/fbcover.png" />
+    <title>燦坤4月超狂暖身慶！</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="css/game.css" type="text/css" />
+    <link rel="stylesheet" href="css/layout.css" type="text/css" />
+    <script src="js/wow.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+    <!----正式---->
+    <div class="wrapper">
+        <header>
+            <!---插入上方選單--->
+        </header>
+        <!-- 海帶 start -->
+        <canvas id="particle_canvas"></canvas>
+        <script>
+            function microtime() {
+                return new Date().getTime() * 0.001;
+
+            }
+            // returns a random integer from min to max
+            function irand(min, max) {
+                return Math.floor((min || 0) + Math.random() * ((max + 1 || 100) - (min || 0)));
+            }
+
+            // returns a random float from min to max
+            function frand(min, max) {
+                return (min || 0) + Math.random() * ((max || 1) - (min || 0));
+            }
+
+            function clamp(value, min, max) {
+                return Math.min(Math.max(value, min), max);
+            }
+
+            // Two component vector class
+            function Vector2(x, y) {
+                this.x = x || 0;
+                this.y = y || 0;
+
+                this.add = function (other) {
+                    this.x += other.x;
+                    this.y += other.y;
+                }
+
+                this.magnitude = function () {
+                    return Math.sqrt(this.x * this.x + this.y * this.y);
+                }
+            }
+
+            function Color(r, g, b) {
+                this.r = r || 0;
+                this.g = g || 0;
+                this.b = b || 0;
+            }
+            window.addEventListener(
+                "resize",
+                function () {
+                    jsCanvasSnow.resize(window.innerWidth, window.innerHeight);
+                    jsCanvasSnow.init("particle_canvas", options);
+                },
+                false
+            );
+
+            var stopSnow = false;
+
+            //window.innerWidth<1024
+            if (window.innerWidth < 1024) {
+                window.addEventListener(
+                    "load",
+                    function () {
+                        //var options = {};
+                        var options = {
+                            amount: 20,
+                            size: [50, 70],
+                            rotation: [1, 2],
+                            speed: [130, 200],
+                            //speed: [55, 250],
+                            swing: [0.1, 1],
+                            amplitude: [30, 80],
+                            alpha: [0.7, 1],
+                            images: [
+                                "images/banner/snow/d1.png",
+                                "images/banner/snow/d1.png",
+                                "images/banner/snow/d2.png",
+                                "images/banner/snow/d2.png",
+                                "images/banner/snow/d3.png",
+                                "images/banner/snow/d3.png",
+                                "images/banner/snow/p1.png",
+                                "images/banner/snow/p2.png",
+                                "images/banner/snow/p3.png",
+                            ]
+                        };
+
+                        jsCanvasSnow.init("particle_canvas", options);
+                        jsCanvasSnow.start();
+
+
+
+                        //stop snowing after 10 sec 
+                        window.setTimeout(function () { stopSnow = true; }, 5000);
+                    },
+                    false
+                );
+            } else {
+                window.addEventListener(
+                    "load",
+                    function () {
+                        //var options = {};
+                        var options = {
+                            amount: 25,
+                            size: [60, 90],
+                            rotation: [1, 2],
+                            speed: [200, 300],
+                            //speed: [55, 250],
+                            swing: [0.1, 1],
+                            amplitude: [30, 80],
+                            alpha: [0.7, 1],
+                            images: [
+                                "images/banner/snow/d1.png",
+                                "images/banner/snow/d1.png",
+                                "images/banner/snow/d2.png",
+                                "images/banner/snow/d2.png",
+                                "images/banner/snow/d3.png",
+                                "images/banner/snow/d3.png",
+                                "images/banner/snow/p1.png",
+                                "images/banner/snow/p2.png",
+                                "images/banner/snow/p3.png",
+                            ]
+                        };
+
+                        jsCanvasSnow.init("particle_canvas", options);
+                        jsCanvasSnow.start();
+
+                        //stop snowing after 10 sec 
+                        window.setTimeout(function () { stopSnow = true; }, 5000);
+                    },
+                    false
+                );
+            }
+
+            function jsParticle(origin, velocity, size, amplitude, rspeed, alpha, image) {
+                this.origin = origin;
+                this.position = new Vector2(origin.x, origin.y);
+                this.velocity = velocity || new Vector2(0, 0);
+                this.size = size;
+                this.rspeed = rspeed;
+                this.amplitude = amplitude;
+                this.alpha = alpha;
+                this.image = image;
+
+                this.dx = Math.random() * 100;
+                this.rotation = Math.random() * 360;
+
+                this.update = function (delta_time) {
+                    this.dx += this.velocity.x * delta_time;
+                    this.position.y += this.velocity.y * delta_time;
+                    this.position.x = this.origin.x + this.amplitude * Math.sin(this.dx);
+                    this.rotation += this.rspeed * delta_time;
+                };
+            }
+
+            var jsCanvasSnow = {
+                canvas: null,
+                ctx: null,
+                particles: [],
+                running: false,
+
+                pImageObjects: [],
+
+                start_time: 0,
+                frame_time: 0,
+
+                init: function (canvas_id, options) {
+                    // use the container width and height
+                    this.canvas = document.getElementById(canvas_id);
+                    this.ctx = this.canvas.getContext("2d");
+                    this.resize(window.innerWidth, window.innerHeight);
+
+                    // default values
+                    this.pAmount = options.amount || 500;
+                    this.pSize = options.size || [8, 26];
+                    this.pRotation = options.rotation || [-5, 5];
+                    this.pSwing = options.swing || [0.1, 1];
+                    (this.pSpeed = options.speed || [40, 100]),
+                        (this.pAmplitude = options.amplitude || [20, 50]);
+                    this.pAlpha = options.alpha || [0.25, 1];
+                    this.pImageNames = options.images || [];
+
+                    // initialize all the images
+                    for (var i = 0; i < this.pImageNames.length; i++) {
+                        var image = new Image();
+                        image.src = this.pImageNames[i];
+                        this.pImageObjects.push(image);
+                    }
+
+                    this._init_particles();
+                },
+
+                start: function () {
+                    this.running = true;
+                    this.start_time = this.frame_time = microtime();
+                    this._loop();
+                },
+
+                stop: function () {
+                    this.running = false;
+                },
+
+                resize: function (w, h) {
+                    this.canvas.width = w;
+                    this.canvas.height = h;
+
+                },
+
+                _loop: function () {
+                    if (jsCanvasSnow.running) {
+                        jsCanvasSnow._clear();
+                        jsCanvasSnow._update();
+                        jsCanvasSnow._draw();
+                        jsCanvasSnow._queue();
+                    }
+                },
+
+                _init_particles: function () {
+                    // clear the particles array
+                    this.particles.length = 0;
+
+                    for (var i = 0; i < this.pAmount; i++) {
+                        var origin = new Vector2(
+                            frand(0, this.canvas.width),
+                            frand(-this.canvas.height, 0)
+                        );
+                        var velocity = new Vector2(
+                            frand(this.pSwing[0], this.pSwing[1]),
+                            frand(this.pSpeed[0], this.pSpeed[1])
+                        );
+                        var size = frand(this.pSize[0], this.pSize[1]);
+                        var amplitude = frand(this.pAmplitude[0], this.pAmplitude[1]);
+                        var rspeed =
+                            frand(this.pRotation[0], this.pRotation[1]) *
+                            (Math.random() < 0.5 ? -1 : 1);
+                        var alpha = frand(this.pAlpha[0], this.pAlpha[1]);
+                        var image =
+                            this.pImageObjects.length > 0
+                                ? irand(0, this.pImageObjects.length - 1)
+                                : -1;
+
+                        this.particles.push(
+                            new jsParticle(origin, velocity, size, amplitude, rspeed, alpha, image)
+                        );
+                    }
+                },
+
+                _update: function () {
+                    var now_time = microtime();
+                    var delta_time = now_time - this.frame_time;
+
+                    for (var i = 0; i < this.particles.length; i++) {
+                        var particle = this.particles[i];
+                        particle.update(delta_time);
+
+                        if (particle.position.y - particle.size > this.canvas.height) {
+                            // check stop snow
+                            if (!stopSnow) {
+                                particle.position.y = -particle.size * 2;
+                                particle.position.x = particle.origin.x =
+                                    Math.random() * this.canvas.width;
+                            }
+                        }
+                    }
+
+                    this.frame_time = now_time;
+                },
+
+                _draw: function () {
+                    this.ctx.fillStyle = "rgb(255,255,255)";
+
+                    for (var i = 0; i < this.particles.length; i++) {
+                        var particle = this.particles[i];
+                        var center = -(particle.size / 2);
+
+                        this.ctx.save();
+                        this.ctx.translate(particle.position.x, particle.position.y);
+                        this.ctx.rotate(particle.rotation);
+                        this.ctx.globalAlpha = this.particles[i].alpha;
+
+                        if (particle.image == -1)
+                            this.ctx.fillRect(center, center, particle.size, particle.size);
+                        else
+                            this.ctx.drawImage(
+                                this.pImageObjects[particle.image],
+                                center,
+                                center,
+                                particle.size,
+                                particle.size
+                            );
+
+                        this.ctx.restore();
+                    }
+                },
+
+                _clear: function () {
+                    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                },
+
+                _queue: function () {
+                    window.requestAnimationFrame(jsCanvasSnow._loop);
+                }
+            };
+
+        </script>
+        <!-- 海帶 end -->
+        <div class="banner">
+            <div class="banner-slogan">
+                <p class="wow"><img src="images/banner/banner-slogan.png" alt=""><b class="light"></b></p>
+            </div>
+            <div class="topTIME">
+                <div class="topTIME_txt flexbox">
+                    <h2>距離<b>會員特典</b>還有</h2>
+                    <div class="clockGo flexbox">
+                        <p><b>8</b>天</p>
+                        <p><b>18</b>時</p>
+                        <p><b>08</b>分</p>
+                        <p><b>08</b>秒</p>
+                    </div>
+                </div>
+                <div class="oifhu">
+                    <h3><img src="images/banner/banner-slogan-2.png" alt=""><span><img
+                                src="images/banner/banner-slogan-2-scrrow.png" alt=""></span></h3>
+                </div>
+            </div>
+            <div class="banner-btn">
+                <ol class="flexbox">
+                    <!------
+                        第一個li要時段判斷
+                        12點
+                        <li class="wow"><a href="" class="tk3c11-Team-btn"><img src="images/banner/btn-3.png" alt=""></a>
+                        </li>
+                        16點
+                        <li class="wow"><a href="" class="tk3c11-Team-btn"><img src="images/banner/btn-3-16.png" alt=""></a>
+                        </li>
+                        20點
+                        <li class="wow"><a href="" class="tk3c11-Team-btn"><img src="images/banner/btn-3-20.png" alt=""></a>
+                        </li>
+                        沒機會
+                        <li class="wow"><a href="" class="tk3c11-Team-btn"><img src="images/banner/btn-3-last.png" alt=""></a>
+                        </li>
+                    ------>
+                    <li class="wow"><a href="" class="tk3c11-RedEnvelope-btn"><img src="images/banner/btn-1.png"
+                                alt=""></a></li>
+                    <li class="wow"><a href="" class="tk3c11-SinUp-btn"><img src="images/banner/btn-2.png" alt=""></a>
+                    </li>
+                    <li class="wow"><a href="" class="tk3c11-Team-btn"><img src="images/banner/btn-3.png" alt=""></a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <!----跳窗---扭蛋結束動畫出現獎項---->
+        <div id="wipeNow_surprise" class="jumpWindowStyle open" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-1">
+                    <h2>恭喜您獲得</h2>
+                    <h3><b><span>＄</span>1,000</b><span>現金抵用券</span></h3>
+                    <h4><a href="">查詢帳戶</a></h4>
+                    <div class="share-option goshare">
+                        <h5>分享再玩一次</h5>
+                        <ul class="flexbox">
+                            <li><a href="">我要LINE分享</a></li>
+                            <li><a href="">我要FB分享</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a id="close-wipeNow_surprise" class="jumpWindowStyle-close-btn"><img src="images/window-close.png"
+                        alt=""></a>
+            </div>
+        </div>
+        <!----跳窗---抽完沒分享的人---->
+        <div id="wipeNow_surprise_x" class="jumpWindowStyle open" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-1 type-1b">
+                    <p>分享可再獲得一次<br>扭蛋機會喔！</p>
+                    <h4><a href="">查詢帳戶</a></h4>
+                    <div class="share-option goshare">
+                        <h5>分享再玩一次</h5>
+                        <ul class="flexbox">
+                            <li><a href="">我要LINE分享</a></li>
+                            <li><a href="">我要FB分享</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a id="close-wipeNow_surprise_x" class="jumpWindowStyle-close-btn"><img src="images/window-close.png"
+                        alt=""></a>
+            </div>
+        </div>
+        <!----扭蛋---->
+        <div class="section2 squre-shape squre-shape-bar" id="tk3c11-RedEnvelope">
+            <div class="normal-width wow">
+                <div class="section-title section-title flexbox">
+                    <h3><img src="images/game/clock-12.png" alt="" class="belt_PC"></h3>
+                    <h3><img src="images/game/clock-12-m.png" alt="" class="belt_m"></h3>
+                    <!----
+                    時段判斷
+                    12點
+                    <h3><img src="images/game/clock-12.png" alt="" class="belt_PC"></h3>
+                    <h3><img src="images/game/clock-12-m.png" alt="" class="belt_m"></h3>
+                    16點
+                    <h3><img src="images/game/clock-16.png" alt="" class="belt_PC"></h3>
+                    <h3><img src="images/game/clock-16-m.png" alt="" class="belt_m"></h3>
+                    20點
+                    <h3><img src="images/game/clock-20.png" alt="" class="belt_PC"></h3>
+                    <h3><img src="images/game/clock-20-m.png" alt="" class="belt_m"></h3>
+                    空
+                    <h3><img src="images/game/clock-unavailable.png" alt="" class="belt_PC"></h3>
+                    <h3><img src="images/game/clock-unavailable-m.png" alt="" class="belt_m"></h3>
+                   
+                        ---->
+                </div>
+                <div class="belt_m stp1"><img src="images/game/step1-m.png"></div>
+                <div class="games">
+                    <div class="games-info">
+                        <div class="niu_danji">
+
+                            <div class="game_qu">
+                                <div class="game_go"></div>
+                            </div>
+
+                            <div class="dan_gund">
+                                <span class="qiu_1 diaol_1"></span>
+                                <span class="qiu_2 diaol_2"> </span>
+                                <span class="qiu_3 diaol_3"></span>
+                                <span class="qiu_4 diaol_4"></span>
+                                <span class="qiu_5 diaol_5"></span>
+                                <span class="qiu_6 diaol_6"></span>
+                                <span class="qiu_7 diaol_7"></span>
+                                <span class="qiu_8 diaol_8"></span>
+                                <span class="qiu_9 diaol_9"></span>
+                                <span class="qiu_10 diaol_10"></span>
+                                <span class="qiu_11 diaol_11"></span>
+                            </div>
+
+                            <div class="medon"><img src="images/game/mendong.png"></div>
+                            <div class="zjdl">
+                                <span></span>
+                            </div>
+                        </div>
+                        <script>
+                            $(function () {
+
+                                $(".game_go").click(function () {
+                                    $(".game_go").addClass('run');
+                                    setTimeout(function () { draw() }, 1000);
+                                    //draw();
+
+                                });
+
+                                function draw() {
+                                    var number = Math.floor(4 * Math.random() + 1); // 随机中奖号码 number标识
+                                    for (i = 1; i <= 11; i++) {
+                                        // $(".qiu_" + i).removeClass("diaol_" + i);
+                                        $(".qiu_" + i).addClass("wieyi_" + i);
+                                    }
+
+                                    setTimeout(function () {
+                                        for (i = 1; i <= 11; i++) {
+                                            $(".qiu_" + i).removeClass("wieyi_" + i);
+                                        }
+                                    }, 1100);
+                                    setTimeout(function () {
+                                        switch (number) {
+                                            case 1: $(".zjdl").children("span").addClass("diaL_one"); break;
+                                            case 2: $(".zjdl").children("span").addClass("diaL_two"); break;
+                                            case 3: $(".zjdl").children("span").addClass("diaL_three"); break;
+                                            case 4: $(".zjdl").children("span").addClass("diaL_four"); break;
+                                        }
+                                        $(".zjdl").removeClass("none").addClass("dila_Y");
+                                        setTimeout(function () {
+                                            switch (number) {
+                                                case 1: $("#jianpin_one").show(); break;
+                                                case 2: $("#jianpin_two").show(); break;
+                                                case 3: $("#jianpin_three").show(); break;
+                                                case 4: $("#jianpin_kong").show(); break;
+                                            }
+                                        }, 900);
+                                        $(".game_go").removeClass('run');
+                                        $('#wipeNow_surprise').css('display', 'flex');
+                                        $('#wipeNow_surprise').css('z-index', '9999');
+                                        var Classoptions = {
+                                            amount: 25,
+                                            size: [60, 90],
+                                            rotation: [1, 2],
+                                            speed: [200, 300],
+                                            //speed: [55, 250],
+                                            swing: [0.1, 1],
+                                            amplitude: [30, 80],
+                                            alpha: [0.7, 1],
+                                            images: [
+                                                "images/banner/snow/d1.png",
+                                                "images/banner/snow/d1.png",
+                                                "images/banner/snow/d2.png",
+                                                "images/banner/snow/d2.png",
+                                                "images/banner/snow/d3.png",
+                                                "images/banner/snow/d3.png",
+                                                "images/banner/snow/p1.png",
+                                                "images/banner/snow/p2.png",
+                                                "images/banner/snow/p3.png",
+                                            ]
+                                        };
+                                        jsCanvasSnow.init("particle_canvas", Classoptions);
+                                        jsCanvasSnow.start();
+                                        //stop snowing after 10 sec 
+                                        window.setTimeout(function () { stopSnow = true; }, 5000);
+
+                                    }, 3000)
+
+                                    //取消动画
+                                    setTimeout(function () {
+                                        $(".zjdl").addClass("none").removeClass("dila_Y");
+                                        $(".zjdl").children("span").removeAttr('class');
+                                        flag = true;
+                                    }, 3500)
+                                }
+
+                                $('.close').click(function () {
+                                    $('.zonj_zezc').fadeOut();
+                                });
+                            })
+                        </script>
+                        <div class="step1 belt_PC">
+                            <img src="images/game/step1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="gameteach">
+                        <ul class="flexbox">
+                            <li>
+                                <img src="images/game/step2.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/game/step3.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="games-rules-inform">
+                        <ul class="flexbox">
+                            <li class="tk3c-button">
+                                <p class="tk3c-button-txt" id="redEnvelope-rule">遊戲說明</p>
+                            </li>
+                            <li class="tk3c-button">
+                                <p class="tk3c-button-txt check-coupon">查看獲得獎勵</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----跳窗---扭蛋遊戲規則---->
+        <div id="redEnvelope-rule-box" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="redEnvelope-rule-content jumpWindowStyle-content">
+                <h2>扭蛋 遊戲說明</h2>
+                <article>
+                    活動期間：2020/1/10 – 2020/1/14<br>
+                    折價券使用期間：2020/1/15 – 2020/1/19<br><br>
+
+                    1. 神券扭蛋獲得之折價券活動僅限「燦坤線上購物會員」參加，獲得之折價券將由系統直接歸戶至會員帳號(匯入帳戶)。非會員則需先註冊後始可獲得活動資格。<br>
+                    2. 折價券僅可使用於燦坤線上購物，無法使用於燦坤實體門市。<br>
+                    3. 一張折價券僅限使用乙次，須於指定使用期限內使用完畢，逾期則自動失效，恕不補發。<br>
+                    4. 每筆訂單(每張發票)限使用乙張折價券，且結帳金額須依各折價券消費滿額門檻限制使用。<br>
+                    5. 如使用折價券購買商品，並有取消訂單/辦理退、換貨之情形，恕不再補發折價券並僅退還原實際付款金額。(提醒：單筆訂單無法辦理部分商品取消訂單/辦理退、換貨)<br>
+                    6. 折價券惟有點數卡、APPLE商品及部分指定商品無法抵用，其餘商品皆可使用。<br>
+                    7. 根據個人資料保護法，參加者同意燦坤線上購物於本活動目的範圍進行蒐集、處理及利用其個人資料；如參加者如欲閱覽、變更、刪除個資或要求停止蒐集、處理及利用個人資料，請通知燦坤線上購物辦理。<br>
+                    8. 燦坤線上購物保留此活動之修改、變更之權利。
+                </article>
+                <a id="close-redEnvelope-rule-box" class="jumpWindowStyle-close-btn"><img src="images/window-close.png"
+                        alt=""></a>
+            </div>
+        </div>
+        <!----跳窗---獎項查詢---->
+        <div id="wipeNow_surprise_already" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-1 type-1b">
+                    <h2>恭喜您獲得</h2>
+                    <h3><b><span>＄</span>1,000</b><span>現金抵用券</span></h3>
+                    <h4><a href="">查詢帳戶</a></h4>
+                    <div class="share-option">
+                        <ul class="flexbox">
+                            <li class="tk3c-button"><a href="#tk3c11-SinUp" class="tk3c-button-txt"
+                                    id="close-wipeNow_surprise_already">玩下一個遊戲</a></li>
+                        </ul>
+                    </div>
+                    <a class="jumpWindowStyle-close-btn close-wipeNow_surprise_already">X</a>
+                </div>
+            </div>
+        </div>
+        <!----跳窗---明天再來---->
+        <div id="wipeNow_surprise_nochance" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-1 type-1b">
+                    <p>該時段機會用盡<br>請等待下一時段</p>
+                    <h4><a href="">查詢帳戶</a></h4>
+                    <div class="share-option">
+                        <ul class="flexbox">
+                            <li class="tk3c-button"><a href="#tk3c11-SinUp" class="tk3c-button-txt"
+                                    id="close-wipeNow_surprise_nochance">玩下一個遊戲</a></li>
+                        </ul>
+                    </div>
+                    <a class="jumpWindowStyle-close-btn close-wipeNow_surprise_nochance">X</a>
+                </div>
+            </div>
+        </div>
+        <!----跳窗---今天折價全發完了---->
+        <div id="wipeNow_surprise_gameover" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="wipeNow_surprise-content jumpWindowStyle-content">
+                <div class="surprise-style type-1 type-1b">
+                    <p>Sorry...<br>限量扭蛋已搶完<br>請等待下一時段</p>
+                    <h4><a href="">查詢帳戶</a></h4>
+                    <div class="share-option">
+                        <ul class="flexbox">
+                            <li class="tk3c-button"><a href="#tk3c11-SinUp" class="tk3c-button-txt"
+                                    id="close-wipeNow_surprise_gameover">玩下一個遊戲</a></li>
+                        </ul>
+                    </div>
+                    <a class="jumpWindowStyle-close-btn close-wipeNow_surprise_gameover">X</a>
+                </div>
+            </div>
+        </div>
+        <!----百萬購物金簽到---->
+        <div class="section4 squre-shape squre-shape-bar bar-pink" id="tk3c11-SinUp">
+            <div class="normal-width wow">
+                <div class="section-title section-title flexbox">
+                    <h3><img src="images/pre-section1-title.png" alt="" class="belt_PC"></h3>
+                    <h3><img src="images/pre-section1-title-m.png" alt="" class="belt_m"></h3>
+                </div>
+
+                <!----
+                *****百萬購物金簽到狀態 img檔名前.png規則****
+                一般當天可簽到不會有後綴     例:pre-section1-calendar-day3.png
+                got.png已過              例:pre-section1-calendar-day1-got.png
+                none.png不可領              例:pre-section1-calendar-day1-none.png
+                ---->
+                <!---未登入的條件下 class需加 +fadeWaySibling--->
+                <ul class=" daily-signup flexbox">
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day1-got.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day2.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day3-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day4-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day5-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day6-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day7-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day8-none.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/pre-section1-calendar-day9-none.png" alt=""></a>
+                    </li>
+                </ul>
+                <!---未登入的條件下 class需加 +fadeWaySibling--->
+                <div class="rules">
+                    <ul class="flexbox">
+                        <li class="tk3c-button">
+                            <p class="tk3c-button-txt" id="daily-signup-rule">遊戲說明</p>
+                        </li>
+                        <li class="tk3c-button black">
+                            <p class="tk3c-button-txt check-coupon">查看我的獎勵</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="spotlight"></div>
+            <div class="fadeWay">
+                <div class="fadeWay-txt flexbox">
+                    <div class="cecec">
+                        <p><a class="check-coupon"><img src="images/section4-notsignin.png" alt=""></a></p>
+                    </div>
+                </div>
+            </div>
+            <!---未登入的條件下 +整塊fadeWay DIV--->
+            <!---已登入--不須出現此塊
+            <div class="fadeWay">
+                <div class="fadeWay-txt flexbox">
+                    <div class="cecec">
+                        <h3><img src="images/section4-notsignin-icon.png" alt="">您尚未登入喔!</h3>
+                        <p><a class="check-coupon"><img src="images/section4-notsignin.png" alt=""></a></p>
+                    </div>
+                </div>
+            </div>
+            --->
+        </div>
+        <!----跳窗---百萬購物金簽到規則---->
+        <div id="daily-signup-rule-box" class="jumpWindowStyle " style="display:none;">
+            <div class="bg"></div>
+            <div class="daily-signup-rule-content jumpWindowStyle-content">
+                <h2>百萬購物金簽到說明</h2>
+                <article>
+                    簽到時間：2020/1/10 – 2020/1/14<br>
+                    使用時間：領取後14天內須使用完畢<br><br>
+
+                    1. 燦坤線上購物會員活動獲得之購物金將直接匯入帳戶；非會員獲得購物金時，至會員中心使用參加活動填寫之資料註冊即可匯入帳戶。<br>
+                    2. 購物金優惠僅適用燦坤線上購物，不可與其他優惠活動並行。<br>
+                    3. 購物金於若超過使用期限未使用完畢，將直接歸零，恕不歸還。<br>
+                    4. 活動需連續簽到，方可獲得購物金。<br>
+                    5. 如使用購物金購買商品後辦理退貨，此購物金將視為已使用，不再另外補發。<br>
+                    6. 根據個人資料保護法，參加者同意燦坤線上購物於本活動目的範圍進行蒐集、處理及利用其個人資料。<br>
+                    7. 燦坤線上購物保留此活動之修改、變更之權利。
+                </article>
+                <a id="close-daily-signup-rule-box" class="jumpWindowStyle-close-btn"><img src="images/window-close.png"
+                        alt=""></a>
+            </div>
+        </div>
+        <!----追蹤---->
+        <div class="section5" id="tk3c11-Team">
+            <div class="biggest-width wow">
+                <div class="normal-width">
+                    <div class="section-title flexbox">
+                        <h3><img src="images/pre-section2-title.png" alt="" class="belt_PC"></h3>
+                        <h3><img src="images/pre-section2-title-m.png" alt="" class="belt_m"></h3>
+                    </div>
+                    <div class="track-information">
+                        <script>
+                            $(function () {
+                                // 預設顯示第一個 Tab
+                                var _showTab = 0;
+                                $('#pro-article').each(function () {
+                                    var $tab = $(this);
+                                    var $defaultLi = $('ul.tabs li', $tab).eq(_showTab).addClass('active');
+                                    $($defaultLi.find('a').attr('href')).siblings().hide();
+                                    $('ul.tabs li', $tab).click(function () {
+                                        var $this = $(this),
+                                            _clickTab = $this.find('a').attr('href');
+                                        $this.addClass('active').siblings('.active').removeClass('active');
+                                        $(_clickTab).stop(false, true).fadeIn().siblings().hide();
+                                        return false;
+                                    }).find('a').focus(function () {
+                                        this.blur();
+                                    });
+                                });
+                                $('#tab1-de').each(function () {
+                                    var $tab = $(this);
+                                    var $defaultLi = $('ul.de-tabs li', $tab).eq(_showTab).addClass('active');
+                                    $($defaultLi.find('a').attr('href')).siblings().hide();
+                                    $('ul.de-tabs li', $tab).click(function () {
+                                        var $this = $(this),
+                                            _clickTab = $this.find('a').attr('href');
+                                        $this.addClass('active').siblings('.active').removeClass('active');
+                                        $(_clickTab).stop(false, true).fadeIn().siblings().hide();
+                                        return false;
+                                    }).find('a').focus(function () {
+                                        this.blur();
+                                    });
+                                });
+                            });
+                            // ]]> -->
+                        </script>
+                        <div id="pro-article">
+                            <ul class="tabs flexbox">
+                                <li><a href="#tab1"><b>全網狂銷</b></a></li>
+                                <li><a href="#tab2"><b>筆電</b></a></li>
+                                <li><a href="#tab3"><b>主機螢幕</b></a></li>
+                                <li><a href="#tab4"><b>電視劇院</b></a></li>
+                                <li><a href="#tab4"><b>Apple</b></a></li>
+                                <li><a href="#tab5"><b>季節家電</b></a></li>
+                                <li><a href="#tab6"><b>冰箱洗衣機</b></a></li>
+                                <li><a href="#tab7"><b>生活小家電</b></a></li>
+                                <li><a href="#tab8"><b>生活3C配件</b></a></li>
+                                <li><a href="#tab9"><b>吸塵器</b></a></li>
+                                <li><a href="#tab10"><b>遊戲</b></a></li>
+                                <li><a href="#tab11"><b>相機</b></a></li>
+                            </ul>
+                            <div id="tabs_container">
+                                <div id="tab1" class="tab_content">
+                                    <div id="tab1-de">
+                                        <ul class="de-tabs flexbox">
+                                            <li><a href="#tab1de-1"><b>價格不限</b></a></li>
+                                            <li><a href="#tab1de-2"><b>2000元以下</b></a></li>
+                                            <li><a href="#tab1de-3"><b>2000元~1萬元</b></a></li>
+                                            <li><a href="#tab1de-4"><b>1萬元~3萬元</b></a></li>
+                                            <li><a href="#tab1de-5"><b>3萬元~-5萬元</b></a></li>
+                                            <li><a href="#tab1de-6"><b>5萬元以上</b></a></li>
+                                        </ul>
+                                        <div id="tabde_container" class="color-container">
+                                            <div id="tab1de-1" class="tab_content">
+                                                <!----產品s--->
+                                                <div class="pListType-all">
+                                                    <div class="pListType first-type">
+                                                        <div class="bag">
+                                                            <a href=""></a>
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="more">
+                                                            <p class="already">已追蹤</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>9151095</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>9151095</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>9151095</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>9151095</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="moreP">
+                                                        <a href="">看更多</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div id="tab1de-2" class="tab_content">
+                                                <!----產品s--->
+                                                <div class="pListType-all">
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器顯示器</b>
+                                                                </p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>100000000000</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pListType first-type">
+                                                        <a href=""></a>
+                                                        <div class="bag">
+                                                            <h4>---已有<b>10</b>人想買---</h4>
+                                                            <div class="cover"
+                                                                style="background-image: url(images/p-test.jpg);">
+                                                                <img src="images/p-blank.png" alt=""></div>
+                                                            <div class="pName">
+                                                                <p><b>顯示器顯示器顯示器</b></p>
+                                                                <h3>米加智慧生活雲台版米加智慧生活雲台版</h3>
+                                                            </div>
+                                                            <div class="pPrise flexbox">
+
+                                                                <p>活動價＄<b>995</b></p>
+                                                            </div>
+                                                            <div class="more">
+                                                                <p>加入追蹤</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab_content">
+                                    <div id="tab2-de">
+                                        <ul class="de-tabs flexbox">
+                                            <li><a href="#tab2de-1"><b>價格不限</b></a></li>
+                                            <li><a href="#tab2de-2"><b>2000元以下</b></a></li>
+                                            <li><a href="#tab2de-3"><b>2000元~1萬元</b></a></li>
+                                            <li><a href="#tab2de-4"><b>1萬元~3萬元</b></a></li>
+                                            <li><a href="#tab2de-5"><b>3萬元~-5萬元</b></a></li>
+                                            <li><a href="#tab2de-6"><b>5萬元以上</b></a></li>
+                                        </ul>
+                                        <div id="tabde_container" class="color-container">
+                                            <div class="p_noshow">
+                                                <p>查無商品</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copcop">
+                            本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------漂浮右選單------>
+        </div>
+        <aside id="right-nav">
+            <ul class="nav-list">
+                <li>
+                    <div class="rn-title">
+                        <p>超狂<br>暖身慶</p>
+                    </div>
+                    <ol>
+                        <li><a class="tk3c11-RedEnvelope-btn">扭蛋大禮包<br><b>抽＄888</b></a></li>
+                        <li><a class="tk3c11-SinUp-btn">天天簽到<br>最高送<b>＄1,366</b></a></li>
+                        <li><a class="tk3c11-Team-btn">搶先追蹤<br><b>降價</b>馬上通知</a></li>
+                        <li><a href="https://events.tk3c.com/events_net/events_net/202004tk3c_vip/dm.html"
+                                target="_blank"><img src="images/right-side-nav-list-style-book.png" alt="">
+                                <div class="plus">
+                                    手冊<br>線上看
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <a href="javascript:goTop();" id="gotop" class="gotop"><img src="images/gotop.png" alt=""></a>
+        </aside>
+        <!------手機板下方選單------>
+        <div class="mobile-nav">
+            <a href="" id="ssslogo"><img src="images/sslogo.png" alt="" style="display: block;"></a>
+            <a href="javascript:goTop();" id="gotop2" class="gotop"><img src="images/gotop.png" alt=""></a>
+            <ul class="mobile-nav-control flexbox">
+                <li>
+                    <div class="fixed-title flexbox">
+                        <div class="fixed-topic">
+                            玩遊戲<b>搶好康</b>
+                        </div>
+                    </div>
+                    <div class="hidden-category">
+                        <ol>
+                            <li><a class="tk3c11-RedEnvelope-btn">扭蛋大禮包</a></li>
+                            <li><a class="tk3c11-SinUp-btn">累積簽到送</a></li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+                    <div class="fixed-title flexbox">
+                        <div class="fixed-topic">
+                            優惠搶先看
+                        </div>
+                    </div>
+                    <div class="hidden-category">
+                        <ol>
+                            <li><a href="https://events.tk3c.com/events_net/events_net/202004tk3c_vip/dm.html"
+                                    target="_blank">
+                                    手冊搶先看
+                                </a>
+                            </li>
+
+                            <li><a class="tk3c11-Team-btn">搶先追蹤</a></li>
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!----跳窗---所有簽到登入---->
+        <div id="check-coupon-box" class="jumpWindowStyle" style="display:none;">
+            <div class="bg"></div>
+            <div class="check-coupon-content jumpWindowStyle-content">
+                <article style="background: #fff;">
+                    <div class="midbox">
+                        <form action="">
+                            <div class="midbg">
+                                <div class="title-pop">會員登入</div>
+                                <div class="fontbox">
+                                    <div id="userInput" class="normal-input"><input
+                                            name="ctl00$ContentPlaceHolder1$txtstep1_email" type="text"
+                                            id="ctl00_ContentPlaceHolder1_txtstep1_email" tabindex="1"
+                                            placeholder="請輸入註冊E-mail" class="box_login icon_person">
+                                        <ul class="keywordMail" style="display: none;"></ul>
+                                    </div>
+                                    <div class="normal-input" id="userInput2">
+                                        <a href="javascript:void(0)" class="passChange"
+                                            style="background: url(&quot;https://www.tk3c.com/images/see1.png&quot;) 0% 0% / 35px no-repeat;"></a>
+                                        <input name="ctl00$ContentPlaceHolder1$txt_password" type="password"
+                                            maxlength="16" id="ctl00_ContentPlaceHolder1_txt_password" tabindex="1"
+                                            class="box_login icon_password" placeholder="請輸入8-16 英數密碼"
+                                            onkeydown="onkeystep2()">
+                                    </div>
+                                    <div class="checkCodeBox flexbox">
+                                        <div>驗證碼</div>
+                                        <div><input name="ctl00$ContentPlaceHolder1$txt_verify" type="text"
+                                                maxlength="6" id="ctl00_ContentPlaceHolder1_txt_verify" tabindex="2"
+                                                minlength="6" laceholder="請輸入右方數字" class="box_password"
+                                                onkeydown="onkeystep2()"></div>
+                                        <div><img id="ctl00_ContentPlaceHolder1_img_VerifyCode" alt="驗證碼" onclick=""
+                                                src="../verify/VerifyCode.aspx"
+                                                style="border-width:0px;height: 44px; width: 95%; border-width: 0px; float: right;">
+                                        </div>
+                                        <div><a href="javascript:void(0)" onclick="refresh_verify_code()">
+                                                <img src="https://www.tk3c.com/images/member_code_reload.png" border="0"
+                                                    style="height: 44px; line-height: 44px;"></a></div>
+                                    </div>
+                                    <div class="loginStyleOne"><input type="submit"
+                                            name="ctl00$ContentPlaceHolder1$btn_step1_ok" value="Email帳號登入"
+                                            onclick="return checkstep1();" id="ctl00_ContentPlaceHolder1_btn_step1_ok"
+                                            class="bg_yellow" style="height: 44px;border: 0 ; box-shadow: none;"> ｜
+                                        <a style="color:blue;cursor:pointer;"
+                                            onclick="javascript:$('html,body').animate({scrollTop:$('#divRegister').offset().top}, 800);">立即加入會員</a>
+                                    </div>
+                                    <div class="loginStyleTwo">
+                                        <input type="submit" name="ctl00$ContentPlaceHolder1$member_login_fb_btn"
+                                            value="使用 facebook 快速登入"
+                                            onclick="this.disabled = true; __doPostBack('ctl00$ContentPlaceHolder1$member_login_fb_btn','');"
+                                            id="ctl00_ContentPlaceHolder1_member_login_fb_btn"
+                                            class="member_btn bg_fbblue font_white">
+                                        <input type="submit" name="ctl00$ContentPlaceHolder1$member_login_line_btn"
+                                            value="使用 line 快速登入"
+                                            onclick="this.disabled = true; __doPostBack('ctl00$ContentPlaceHolder1$member_login_line_btn','');"
+                                            id="ctl00_ContentPlaceHolder1_member_login_line_btn"
+                                            class="member_btn bg_linegreen font_white">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+                <a id="close-check-coupon-box" class="jumpWindowStyle-close-btn">X</a>
+            </div>
+        </div>
+        <footer>
+            <!---請插頁腳--->
+        </footer>
+        <script src="js/slick/slick.min.js"></script>
+        <link rel="stylesheet" href="js/slick/slick-theme.css">
+        <link rel="stylesheet" href="js/slick/slick.css">
+        <script>
+            $(document).ready(function () {
+                wow = new WOW(
+                    {
+                        boxClass: 'wow',
+                        animateClass: 'animated',
+                        offset: 0,
+                        mobile: false,
+                        live: true
+                    }
+                )
+                wow.init();
+                $("#right-nav").hide();
+                $(function () {
+                    var height = $(document).height();
+                    var wheight = $(window).height();
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 300) {
+                            $('#right-nav').fadeIn();
+                        } else {
+                            $('#right-nav').fadeOut();
+                        }
+                    });
+                    $('.gotop').click(function () {
+                        $('body,html').animate({
+                            scrollTop: 0
+                        }, 'slow');
+                        return false;
+                    });
+                });
+                var Classoptions = {
+                    amount: 25,
+                    size: [60, 90],
+                    rotation: [1, 2],
+                    speed: [200, 300],
+                    //speed: [55, 250],
+                    swing: [0.1, 1],
+                    amplitude: [30, 80],
+                    alpha: [0.7, 1],
+                    images: [
+                        "images/banner/snow/d1.png",
+                        "images/banner/snow/d1.png",
+                        "images/banner/snow/d2.png",
+                        "images/banner/snow/d2.png",
+                        "images/banner/snow/d3.png",
+                        "images/banner/snow/d3.png",
+                        "images/banner/snow/p1.png",
+                        "images/banner/snow/p2.png",
+                        "images/banner/snow/p3.png",
+                    ]
+                };
+
+
+                $('#redEnvelope-rule').click(function () {
+                    $('#redEnvelope-rule-box').addClass('open').fadeIn();
+                    $('#close-redEnvelope-rule-box').click(function () {
+                        $('#redEnvelope-rule-box').removeClass('open').fadeOut();
+                    });
+                });
+                $('#team-rule').click(function () {
+                    $('#team-rule-box').addClass('open').fadeIn();
+                    $('#close-team-rule-box').click(function () {
+                        $('#team-rule-box').removeClass('open').fadeOut();
+                    });
+                });
+                $('#team-friend').click(function () {
+                    $('#team-friend-box').addClass('open').fadeIn();
+                    $('#close-team-friend-box').click(function () {
+                        $('#team-friend-box').removeClass('open').fadeOut();
+                    });
+                });
+                $('#daily-signup-rule').click(function () {
+                    $('#daily-signup-rule-box').addClass('open').fadeIn();
+                    $('#close-daily-signup-rule-box').click(function () {
+                        $('#daily-signup-rule-box').removeClass('open').fadeOut();
+                    });
+                });
+                $('.check-coupon').click(function () {
+                    $('#check-coupon-box').addClass('open').fadeIn();
+                    $('#close-check-coupon-box').click(function () {
+                        $('#check-coupon-box').removeClass('open').fadeOut();
+                    });
+                });
+
+                $('a.tk3c11-RedEnvelope-btn').click(function () {
+                    var top = $('#tk3c11-RedEnvelope').offset().top;
+                    $('body,html').stop().animate({ scrollTop: top }, 800);
+                    return false;
+                });
+                $('a.tk3c11-Team-btn').click(function () {
+                    var top = $('#tk3c11-Team').offset().top;
+                    $('body,html').stop().animate({ scrollTop: top }, 800);
+                    return false;
+                });
+                $('a.tk3c11-SinUp-btn').click(function () {
+                    var top = $('#tk3c11-SinUp').offset().top;
+                    $('body,html').stop().animate({ scrollTop: top }, 800);
+                    return false;
+                });
+                $('a.tk3c11-Hundred-btn').click(function () {
+                    var top = $('#tk3c11-Hundred').offset().top;
+                    $('body,html').stop().animate({ scrollTop: top }, 800);
+                    return false;
+                });
+                $('a.tk3c11-Reciprocal-btn').click(function () {
+                    var top = $('#tk3c11-Reciprocal').offset().top;
+                    $('body,html').stop().animate({ scrollTop: top }, 800);
+                    return false;
+                });
+                $('#close-wipeNow_surprise').click(function () {
+                    $('#wipeNow_surprise').removeClass('open').fadeOut();
+                });
+                $('#close-wipeNow_surprise_x').click(function () {
+                    $('#wipeNow_surprise_x').removeClass('open').fadeOut();
+                });
+                //跳窗-已獲得 觸發按鈕class請加上wipeNow_surprise_already-btn
+                $('.wipeNow_surprise_already-btn').click(function () {
+                    $('#wipeNow_surprise_already').addClass('open').fadeIn();
+                    $('.close-wipeNow_surprise_already').click(function () {
+                        $('#wipeNow_surprise_already').removeClass('open').fadeOut();
+                        var top = $('#tk3c11-SinUp').offset().top;
+                        $('body,html').stop().animate({ scrollTop: top }, 800);
+
+                    });
+                });
+                //跳窗-明天再來 觸發按鈕class請加上wipeNow_surprise_nochance-btn
+                $('.wipeNow_surprise_nochance-btn').click(function () {
+                    $('#wipeNow_surprise_nochance').addClass('open').fadeIn();
+                    $('.close-wipeNow_surprise_nochance').click(function () {
+                        $('#wipeNow_surprise_nochance').removeClass('open').fadeOut();
+                    });
+                    $('#close-wipeNow_surprise_nochance').click(function () {
+                        $('#wipeNow_surprise_nochance').removeClass('open').fadeOut();
+                        var top = $('#tk3c11-SinUp').offset().top;
+                        $('body,html').stop().animate({ scrollTop: top }, 800);
+
+                    });
+                });
+                //跳窗-已放進你帳戶 觸發按鈕class請加上wipeNow_surprise_inside-btn
+                $('.wipeNow_surprise_inside-btn').click(function () {
+                    $('#wipeNow_surprise_inside').addClass('open').fadeIn();
+                    $('.close-wipeNow_surprise_inside').click(function () {
+                        $('#wipeNow_surprise_inside').removeClass('open').fadeOut();
+                    });
+                    $('#close-wipeNow_surprise_inside').click(function () {
+                        $('#wipeNow_surprise_inside').removeClass('open').fadeOut();
+                        var top = $('#tk3c11-SinUp').offset().top;
+                        $('body,html').stop().animate({ scrollTop: top }, 800);
+                    });
+                });
+
+                //跳窗-今天折價券已送完 觸發按鈕class請加上wipeNow_surprise_gameover-btn
+                $('.wipeNow_surprise_gameover-btn').click(function () {
+                    $('#wipeNow_surprise_gameover').addClass('open').fadeIn();
+                    $('.close-wipeNow_surprise_gameover').click(function () {
+                        $('#wipeNow_surprise_gameover').removeClass('open').fadeOut();
+                    });
+                    $('#close-wipeNow_surprise_gameover').click(function () {
+                        $('#wipeNow_surprise_gameover').removeClass('open').fadeOut();
+                        var top = $('#tk3c11-SinUp').offset().top;
+                        $('body,html').stop().animate({ scrollTop: top }, 800);
+                    });
+                });
+
+                $('.mobile-nav ul li .fixed-title').click(function () {
+                    var $self = $(this);
+                    $self.next("div.hidden-category").slideToggle('fast', function () {
+                        $('body').addClass('m-nav-openNow');
+                        $self.parent('li').toggleClass('current');
+                        if ($self.parent('li').attr('class') == ('current')) {
+                            $self.parent('li').siblings().children("div.hidden-category").slideUp("fast");
+                            $self.parent('li').siblings().attr('class', '');
+                        }
+                    });
+                    $(document).click(function (e) {
+                        if ($('body').attr('class') == ('m-nav-openNow')) {
+                            var divTop = $('.mobile-nav ul li.current');
+                            if (!divTop.is(e.target) && divTop.has(e.target).length === 0) {
+                                $('body').removeClass('m-nav-openNow');
+                                $('.mobile-nav ul li').children("div.hidden-category").css('display', 'none');
+                                $('.mobile-nav ul li.current').removeClass('current');
+
+                            }
+                        }
+                    })
+
+                });
+
+            });
+
+        </script>
+    </div>
+    <!---adddddddd--->
+</body>
+
+</html>
